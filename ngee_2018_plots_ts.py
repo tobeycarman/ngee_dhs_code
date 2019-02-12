@@ -218,29 +218,34 @@ tab20c = plt.cm.get_cmap('tab20c')
 # #plt.show(block=True)
 
 
-def make_timeseries_plot(dataset_list, label_list, yax_label, suptitle, savename):
+def make_timeseries_plot(dataset_list, label_list, color_list, yax_label, suptitle, savename):
 
   # MAKE THE TIMESERIES FIGURE(S)
   fig2 = plt.figure(figsize=(15,7))
 
-  ax0 = plt.subplot2grid((3, 1), (0, 0))
-  ax1 = plt.subplot2grid((3, 1), (1, 0))
-  ax2 = plt.subplot2grid((3, 1), (2, 0))
+  axes = [plt.subplot2grid((len(dataset_list),1),(i, 0)) for i, x in enumerate(dataset_list)]
+
+  
+
+  # ax0 = plt.subplot2grid((3, 1), (0, 0))
+  # ax1 = plt.subplot2grid((3, 1), (1, 0))
+  # ax2 = plt.subplot2grid((3, 1), (2, 0))
   ax_ds = zip(
-      (ax0, ax1, ax2),
+      axes,
       dataset_list,
       label_list,
-      (tab20c.colors[0], tab20c.colors[4], tab20c.colors[8])
+      color_list
     )
 
-  START=240 #1990
-  END=540   #2015
+  #START=240 #1990
+  #END=540   #2015
 
   for ax, ds, txt, custcol in ax_ds:
-    ax.plot(dt_idx[START:END], ds[START:END].quantile(.025, 1), linewidth=0, color="black", alpha=0.5, linestyle=':')
-    ax.plot(dt_idx[START:END], ds[START:END].quantile(.975, 1), linewidth=0, color="black", alpha=0.5, linestyle=':')
-    ax.plot(dt_idx[START:END], ds[START:END].median(1), linewidth=1.0, color=custcol, label="median", alpha=0.5)
-    ax.fill_between(dt_idx[START:END].to_pydatetime(), ds[START:END].quantile(.025, 1), ds[START:END].quantile(.975, 1), color='gray', alpha=0.35)
+    print type(ds)
+    ax.plot(ds.index[0:], ds[0:].quantile(.025, 1), linewidth=0, color="black", alpha=0.5, linestyle=':')
+    ax.plot(ds.index[0:], ds[0:].quantile(.975, 1), linewidth=0, color="black", alpha=0.5, linestyle=':')
+    ax.plot(ds.index[0:], ds[0:].median(1), linewidth=1.0, color=custcol, label="median", alpha=0.5)
+    ax.fill_between(ds.index[0:].to_pydatetime(), ds[0:].quantile(.025, 1), ds[0:].quantile(.975, 1), color='gray', alpha=0.35)
 
     # Proxy artist for the legend
     pa = ax.fill(np.nan, np.nan, color='gray', linewidth=.5, alpha=0.35, label="95% CI")
@@ -261,6 +266,18 @@ def make_timeseries_plot(dataset_list, label_list, yax_label, suptitle, savename
   plt.savefig(savename)
   #plt.show(block=True)
 
+make_timeseries_plot(
+  (df_convert_index(filter(lambda x: x['site']=='dhs_1' and x['cmt']=='cmt04', config['runs'])[0]['ens_ts_NPP']),
+   df_convert_index(filter(lambda x: x['site']=='dhs_2' and x['cmt']=='cmt04', config['runs'])[0]['ens_ts_NPP']),
+   df_convert_index(filter(lambda x: x['site']=='dhs_3' and x['cmt']=='cmt04', config['runs'])[0]['ens_ts_NPP']),
+   df_convert_index(filter(lambda x: x['site']=='dhs_4' and x['cmt']=='cmt04', config['runs'])[0]['ens_ts_NPP']),
+   df_convert_index(filter(lambda x: x['site']=='dhs_5' and x['cmt']=='cmt04', config['runs'])[0]['ens_ts_NPP'])),
+  ('dhs1,dhs2,dhs3,dhs4,dhs5'.split(',')),
+  ("red","green","blue","orange","yellow"),
+  "???",
+  "timseries",
+  "test.pdf"  
+)
 
 make_timeseries_plot(
     (heath07_ts_LAI, shrub04_ts_LAI, tussk05_ts_LAI), 
