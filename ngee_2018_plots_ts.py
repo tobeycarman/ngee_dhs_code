@@ -12,11 +12,91 @@
 
 # Use the ngee_2018_data_prep.sh script to setup for this script.
 
+import os
+import glob
 import pandas as pd
 import numpy as np
 import cfunits
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator, FormatStrFormatter, MaxNLocator
+
+# Build up a configuration dict with info about our runs.
+config = dict(
+  runs=[
+    dict( site="dhs_1", cmt="cmt04", ),
+    dict( site="dhs_2", cmt="cmt04", ),
+    dict( site="dhs_3", cmt="cmt04", ),
+    dict( site="dhs_4", cmt="cmt04", ),
+    dict( site="dhs_5", cmt="cmt04", ),
+    dict( site="dhs_1", cmt="cmt05", ),
+    dict( site="dhs_2", cmt="cmt05", ),
+    dict( site="dhs_3", cmt="cmt05", ),
+    dict( site="dhs_4", cmt="cmt05", ),
+    dict( site="dhs_5", cmt="cmt05", ),
+    dict( site="kougorak", cmt="cmt04", ),
+    dict( site="kougorak", cmt="cmt05", ),
+    dict( site="kougorak", cmt="cmt07", ),
+    dict( site="southbarrow", cmt="cmt06", ),
+  ]
+)
+
+# Fill out some more info that I am too lazy to type by hand
+for r in config['runs']:
+    r['vars'] = 'NPP,LAI,HeteroResp,SoilOrgC'.split(',')
+    r['years'] = (1990,2015)
+
+
+#
+def load_ensemble_ts(path, var, year_start, year_end):
+  # Something like: dhs_1_cmt04/ensemble.ts.2000001299.HeteroResp.1990.2015.Rdata.csv
+  g = os.path.join(path, "ensemble.ts.*.{}.{}.{}.Rdata.csv".format(var, year_start, year_end))
+  fl = glob.glob(g) 
+  print g
+  print "trying to open:", fl
+
+  if len(fl) > 1:
+    print fl
+    raise RuntimeError("Too many files found!")
+  elif len(fl) < 1:
+    print fl
+    raise RuntimeError("Not enough files found!")
+  return pd.read_csv(fl[0]).transpose()
+
+# Load all the data into the config object. 
+for run in config['runs']:
+  for var in run['vars']:
+    # Load the data into memory...
+    startyr, endyr = run['years']
+
+    df = load_ensemble_ts("../NGEE_Dec_2018_followup/yearly_runs/{}_{}".format(run['site'], run['cmt']), var, startyr, endyr )
+
+    #dt_dix = pd.DatetimeIndex(start="1-1-{}".format(startyr), periods=(endyr-startyr)+1, freq='MS')
+
+    run['ens_ts_{}'.format(var)] = df
+
+
+def df_convert_index(dataFrame, start="1-1-1990"):
+
+  if any([x in dataFrame.index[0] for x in "NPP HR".split(" ")]):
+    from_units = cfunits.Units("kg C m-2 s-1")
+    to_units = cfunits.Units("g C m-2 month-1")
+
+  if any([x in dataFrame.index[0] for x in "".split(" ")]):
+    pass
+
+  months, ens_members = dataFrame.shape
+  #print months, ens_members
+
+  dt_idx = pd.DatetimeIndex(start=start, periods=months, freq="MS")
+  #print dt_idx.shape
+  #print dataFrame.shape
+  #dataFrame = dataFrame.transpose()
+  #print dataFrame.shape
+
+  dataFrame = pd.DataFrame(cfunits.Units.conform(dataFrame.values, from_units, to_units), index=dt_idx)
+
+  return dataFrame
+
 
 # Read in data
 heath07_ts_HR  =   pd.read_csv("PEcAn_2000001129/ensemble.ts.2000001177.HeteroResp.1970.2029.Rdata.csv").transpose()
