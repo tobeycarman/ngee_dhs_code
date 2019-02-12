@@ -25,25 +25,21 @@
 ################################################################################
 
 
-declare -a SIMARR=( "2000001129" "2000001131" "2000001132" "2000001137" "2000001138" "2000001139" "2000001141" )
-declare -a SIMARR=( "2000001129" "2000001131" "2000001132" "2000001137")
-declare -a SIMARR=( "2000001138" "2000001139" "2000001141" )
-declare -a SIMARR=( "2000001146" "2000001149" )
-declare -a SIMARR=( "2000001154" )
-
-# SoilOrgC and LAI runs
-declare -a SIMARR=( "2000001157" "2000001164" "2000001165" "2000001166" "2000001168" "2000001169"  )
-
-# 1/18/2019, trial run
-declare -a SIMARR=("2000001190")
+declare -a SIMARR=("dhs_1_cmt04" "dhs_1_cmt05"
+"dhs_2_cmt04" "dhs_2_cmt05"
+"dhs_3_cmt04" "dhs_3_cmt05"
+"dhs_4_cmt04" "dhs_4_cmt05"
+"dhs_5_cmt04" "dhs_5_cmt05"
+"kougorak_cmt04" "kougorak_cmt05" "kougorak_cmt07"
+"southbarrow_cmt06")
 
 # On modex, bundle up the data
 # There is not need for *all* of the simulation results, just the stuff that
 # is summarized in the .Rdata files
 for SIM in "${SIMARR[@]}"
 do
-  cd /data/Model_Output/pecan.output/PEcAn_$SIM
-  find . -name "*.Rdata" -exec tar -rvf ~/PEcAn_$SIM.tar {} \;
+  cd /data/tcarman/ngee_dhs_runs/$SIM
+  find . -name "*.Rdata" -exec tar -rvf ~/$SIM.tar {} \;
   cd ~
 done
 
@@ -54,13 +50,13 @@ do
   if [ ! -e PEcAn_$SIM.tar ]
   then
     echo "Get it: PEcAn_$SIM.tar"
-    scp modex.bnl.gov:PEcAn_$SIM.tar .
-    mkdir PEcAn_$SIM
-    cd PEcAn_$SIM
-    tar -xvf ../PEcAn_$SIM.tar
+    scp modex.bnl.gov:$SIM.tar .
+    mkdir $SIM
+    cd $SIM
+    tar -xvf ../$SIM.tar
     cd ..
   else
-    echo "Already seem to have PEcAn_$SIM.tar"
+    echo "Already seem to have $SIM.tar"
   fi
 done
 
