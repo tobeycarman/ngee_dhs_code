@@ -65,6 +65,20 @@ def midx2mname(midx):
   return datetime.date(year=1970, month=midx, day=1).strftime('%B')
 
 
+def wrtite_file(directory, name):
+
+  try:
+    os.mkdir(os.path.join(directory, "plots"))
+  except OSError as e:
+    if e.errno != errno.EEXIST:
+      raise
+
+  of = os.path.join(directory, "plots", name)
+  if os.path.exists(of):
+    print "Overwriting {}".format(of)
+  plt.savefig(of)
+
+
 def df_convert_index(dataFrame, start="1-1-1990"):
 
   var, ens_member = dataFrame.index[0].split(".")
@@ -426,6 +440,11 @@ def make_timeseries_figure(run_output_dir):
     ax.set_ylabel(config_dict[var]['to_units'])
 
 
+def modex_smart_find_drivers(run_output_dir):
+  from lxml import etree
+  tree = etree.parse( os.path.join(run_output_dir, 'pecan.METProcess.xml') ) 
+  p = os.path.dirname( tree.findall('run/inputs/met/path/path1')[0].text )
+  return p
   plt.show(block=True)
 
 
