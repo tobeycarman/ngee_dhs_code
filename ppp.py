@@ -29,16 +29,18 @@ config_dict = {
     'to_units': 'm2/m2',
   },
   'SoilOrgC': {
-    'from_units': 'g C m-2',
-    'to_units': 'kg C m-2',
+    'from_units': 'kg C m-2',
+    'to_units': 'g C m-2',
   }
 }
 
 def mname2idx(mname):
-  return datetime.datetime.strptime('{} 1 1970'.format(mname), '%B %d %Y')
+  '''Convert a textual month name (i.e. January) to numeric value (i.e. 1)'''
+  return datetime.datetime.strptime('{} 1 1970'.format(mname), '%B %d %Y').month
 
 
 def midx2mname(midx):
+  '''Convert a numeric month value (i.e. 1) to a text month name (i.e. January)'''
   return datetime.date(year=1970, month=midx, day=1).strftime('%B')
 
 
@@ -85,8 +87,27 @@ def find_available_vars_years(run_output_dir):
   return var_list, syr, eyr
 
 
-def load_sensitivity_analysis(path, var, year_start, year_end):
-  '''Returns a dataframe for each PFT'''
+
+def load_sensitivity_analysis(path, var, year_start, year_end, multi_index=False):
+  '''
+  Looking for files like this, one file per variable, per pft:
+  sensitivity.results.2000001397.HeteroResp.1990.2015.Rdata.CMT04-Betula.csv
+  sensitivity.results.2000001397.HeteroResp.1990.2015.Rdata.CMT04-Decid.csv
+  
+  Parameters
+  ----------
+  path : string, path to directory of pecan:dvmdostem runs files (output, etc)
+  var : string, the variable to look for
+  year_start : int, the starting year expected to be in the file path
+  year_end : int, the ending year expected to be in the file path
+  multi_index : bool, return list of pfts and list of DatataFrames (False) or a 
+      single multi-index DataFrame (True)
+ 
+
+  Returns
+  -------
+  Returns a dataframe for each PFT for each variable
+  '''
   g = os.path.join(path, "sensitivity.results.*.{}.{}.{}.Rdata.*.csv".format(var, year_start, year_end))
   fl = glob.glob(g)
 
