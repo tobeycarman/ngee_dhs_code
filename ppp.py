@@ -96,7 +96,7 @@ def df_convert_index(dataFrame, start="1-1-1990"):
 
 def find_available_vars_years(run_output_dir):
   # Look in the run output directory for everything with ts and csv in the name
-  files = glob.glob(os.path.join(run_output_dir, "*.ts.*.csv"))
+  files = sorted(glob.glob(os.path.join(run_output_dir, "*.ts.*.csv")))
 
   var_list = []
   syrs = []
