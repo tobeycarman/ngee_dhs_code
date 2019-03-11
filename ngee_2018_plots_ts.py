@@ -98,6 +98,43 @@ def df_convert_index(dataFrame, start="1-1-1990"):
   return dataFrame
 
 
+dhs1_shrub04_ts_NPP = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_1_cmt04/ensemble.ts.2000001299.NPP.1990.2015.Rdata.csv").transpose()
+dhs2_shrub04_ts_NPP = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_2_cmt04/ensemble.ts.2000001299.NPP.1990.2015.Rdata.csv").transpose()
+dhs3_shrub04_ts_NPP = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_3_cmt04/ensemble.ts.2000001299.NPP.1990.2015.Rdata.csv").transpose()
+dhs4_shrub04_ts_NPP = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_4_cmt04/ensemble.ts.2000001299.NPP.1990.2015.Rdata.csv").transpose()
+dhs5_shrub04_ts_NPP = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_5_cmt04/ensemble.ts.2000001299.NPP.1990.2015.Rdata.csv").transpose()
+
+dhs1_shrub04_ts_HeteroResp = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_1_cmt04/ensemble.ts.2000001299.HeteroResp.1990.2015.Rdata.csv").transpose()
+dhs2_shrub04_ts_HeteroResp = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_2_cmt04/ensemble.ts.2000001299.HeteroResp.1990.2015.Rdata.csv").transpose()
+dhs3_shrub04_ts_HeteroResp = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_3_cmt04/ensemble.ts.2000001299.HeteroResp.1990.2015.Rdata.csv").transpose()
+dhs4_shrub04_ts_HeteroResp = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_4_cmt04/ensemble.ts.2000001299.HeteroResp.1990.2015.Rdata.csv").transpose()
+dhs5_shrub04_ts_HeteroResp = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_5_cmt04/ensemble.ts.2000001299.HeteroResp.1990.2015.Rdata.csv").transpose()
+
+dhs1_shrub04_ts_SOC = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_1_cmt04/ensemble.ts.2000001299.SOC.1990.2015.Rdata.csv").transpose()
+dhs2_shrub04_ts_SOC = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_2_cmt04/ensemble.ts.2000001299.SOC.1990.2015.Rdata.csv").transpose()
+dhs3_shrub04_ts_SOC = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_3_cmt04/ensemble.ts.2000001299.SOC.1990.2015.Rdata.csv").transpose()
+dhs4_shrub04_ts_SOC = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_4_cmt04/ensemble.ts.2000001299.SOC.1990.2015.Rdata.csv").transpose()
+dhs5_shrub04_ts_SOC = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_5_cmt04/ensemble.ts.2000001299.SOC.1990.2015.Rdata.csv").transpose()
+
+dhs1_shrub04_ts_LAI = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_1_cmt04/ensemble.ts.2000001299.LAI.1990.2015.Rdata.csv").transpose()
+dhs2_shrub04_ts_LAI = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_2_cmt04/ensemble.ts.2000001299.LAI.1990.2015.Rdata.csv").transpose()
+dhs3_shrub04_ts_LAI = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_3_cmt04/ensemble.ts.2000001299.LAI.1990.2015.Rdata.csv").transpose()
+dhs4_shrub04_ts_LAI = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_4_cmt04/ensemble.ts.2000001299.LAI.1990.2015.Rdata.csv").transpose()
+dhs5_shrub04_ts_LAI = pd.read_csv("../NGEE_Dec_2018_followup/yearly_runs/dhs_5_cmt04/ensemble.ts.2000001299.LAI.1990.2015.Rdata.csv").transpose()
+
+
+make_timeseries_plot(
+    (dhs1_shrub04_ts_HeteroResp, dhs2_shrub04_ts_HeteroResp, ....), 
+    ("Koug. CMT07 (Heath)","Koug. CMT04 (Shrub)","Koug. CMT05 (Tussock)",),
+    "m-2/m-2",
+    "LAI",
+    "timeseries_LAI.pdf"
+)
+
+
+
+
+
 # Read in data
 heath07_ts_HR  =   pd.read_csv("PEcAn_2000001129/ensemble.ts.2000001177.HeteroResp.1970.2029.Rdata.csv").transpose()
 heath07_ts_NPP =   pd.read_csv("PEcAn_2000001131/ensemble.ts.2000001180.NPP.1970.2029.Rdata.csv").transpose()
@@ -272,7 +309,7 @@ make_timeseries_plot(
    df_convert_index(filter(lambda x: x['site']=='dhs_3' and x['cmt']=='cmt04', config['runs'])[0]['ens_ts_NPP']),
    df_convert_index(filter(lambda x: x['site']=='dhs_4' and x['cmt']=='cmt04', config['runs'])[0]['ens_ts_NPP']),
    df_convert_index(filter(lambda x: x['site']=='dhs_5' and x['cmt']=='cmt04', config['runs'])[0]['ens_ts_NPP'])),
-  ('dhs1,dhs2,dhs3,dhs4,dhs5'.split(',')),
+  ('dhs1_cmt04,dhs2_cmt04,dhs3_cmt04,dhs4_cmt04,dhs5_cmt04'.split(',')),
   ("red","green","blue","orange","yellow"),
   "???",
   "timseries",

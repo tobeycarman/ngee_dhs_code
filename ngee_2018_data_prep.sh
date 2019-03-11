@@ -34,7 +34,7 @@ declare -a SIMARR=("dhs_1_cmt04" "dhs_1_cmt05"
 "southbarrow_cmt06")
 
 # On modex, bundle up the data
-# There is not need for *all* of the simulation results, just the stuff that
+# There is no need for *all* of the simulation results, just the stuff that
 # is summarized in the .Rdata files
 for SIM in "${SIMARR[@]}"
 do
