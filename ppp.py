@@ -239,8 +239,6 @@ def load_driving_data(driving_data_path, start='1990-01-01', end='2015-12-1'):
   return full_df[start:end], var_unit_dict
 
 
-
-
 def make_frs_figure(run_output_dir, yax_var, xax_var, driving_data_path=None):
   ''' ??? '''
   var_list, syr, eyr = find_available_vars_years(run_output_dir)
@@ -251,10 +249,13 @@ def make_frs_figure(run_output_dir, yax_var, xax_var, driving_data_path=None):
     raise RuntimeError("Variable '{}' not available in run output directory {}".format(xax_var, run_output_dir))
 
   if xax_var == 'drivers':
+
     xax_data, var_unit_dict = load_driving_data(driving_data_path)
     yax_data = load_ensemble_ts(run_output_dir, yax_var, syr, eyr)
 
-    fig = plt.figure(figsize=(15,7))
+    yax_data = df_convert_index(yax_data)
+
+    fig = plt.figure(figsize=(8.5,11))
 
     # One axes for each input driver
     ax0 = plt.subplot2grid((2,2), (0, 0))
@@ -263,15 +264,18 @@ def make_frs_figure(run_output_dir, yax_var, xax_var, driving_data_path=None):
     ax3 = plt.subplot2grid((2,2), (1, 1))
 
     for driving_var, ax_inst in zip(xax_data.columns, [ax0,ax1,ax2,ax3]):
-
-      ax_inst.scatter(xax_data[driving_var], yax_data.mean(axis=1))
+      print "Driving variable: {}  full shape: {}  limited shape: {}".format(driving_var, xax_data.shape, xax_data[driving_var].shape)
+      print "Yax var:{}  full shape:{}  mean shape:{}".format(yax_var, yax_data.shape, yax_data.mean(axis=1).shape)
+      # Supposedly plot will be faster than scatter?
+      ax_inst.plot(xax_data[driving_var], yax_data.mean(axis=1), marker='o', linewidth=0.0, alpha=0.25)
       ax_inst.set_xlabel("{} {}".format(driving_var, var_unit_dict[driving_var]))
       ax_inst.set_ylabel("{} {}".format(yax_var, config_dict[yax_var]['to_units']))
 
-    plt.suptitle("{} vs driving variables".format(yax_var))
+    plt.suptitle("{} vs driving variables\n{}\n{}".format(yax_var, driving_data_path, run_output_dir))
 
-    plt.show(block=True)
-    plt.savefig("frs_{}_vs_driver_vars.pdf".format(yax_var))
+    #from IPython import embed; embed()
+    #plt.show(block=True)
+    wrtite_file(run_output_dir, "frs_driver_vs_{}.pdf".format(yax_var))
 
   else:
 
@@ -286,20 +290,25 @@ def make_frs_figure(run_output_dir, yax_var, xax_var, driving_data_path=None):
     ax0 = plt.subplot2grid((1,2), (0, 0))
     ax1 = plt.subplot2grid((1,2), (0, 1))
 
-    ax0.set_title("All Ensemble Members")
-    p0 = ax0.scatter(xax_data, yax_data, alpha=0.25, color='red')
+    print "yax var {} has {} timseries points for {} ensemble members for a total of {} points".format(yax_var, yax_data.shape[0], yax_data.shape[1], yax_data.size)
+    print "xax var {} has {} timseries points for {} ensemble members for a total of {} points".format(xax_var, xax_data.shape[0], xax_data.shape[1], xax_data.size)
+
+
+    ax0.set_title("All Ensemble Members ({}x{}={}points)".format(yax_data.shape[0], yax_data.shape[1], yax_data.size))
+    p0 = ax0.plot(xax_data, yax_data, alpha=0.005, marker='o', linewidth=0.0, color='red')
     ax0.set_xlabel("{} {}".format(xax_var, config_dict[xax_var]['to_units']))
     ax0.set_ylabel("{} {}".format(yax_var, config_dict[yax_var]['to_units']))
 
-    ax1.set_title("Ensemble Mean")
-    p1 = ax1.scatter(xax_data.mean(axis=1), yax_data.mean(axis=1), alpha=0.25, color='blue')
+    ax1.set_title("Ensemble Mean ({}x{}={}points)".format(yax_data.mean(axis=1).shape[0], 1, yax_data.mean(axis=1).size))
+    p1 = ax1.scatter(xax_data.mean(axis=1), yax_data.mean(axis=1), alpha=0.25, marker='o', linewidth=0.0, color='blue')
     ax1.set_xlabel("{} {}".format(xax_var, config_dict[xax_var]['to_units']))
     ax1.set_ylabel("{} {}".format(yax_var, config_dict[yax_var]['to_units']))
 
-    plt.suptitle("{} vs {}".format(yax_var, xax_var))
+    plt.suptitle("{} vs {}\n{}".format(yax_var, xax_var, run_output_dir))
 
-    plt.show(block=True)
-    plt.savefig("frs_{}_vs_{}_vars.pdf".format(yax_var, xax_var))
+    #plt.show(block=True)
+    wrtite_file(run_output_dir, "frs_{}_vs_{}.png".format(yax_var, xax_var))
+
 
 
 
@@ -395,7 +404,7 @@ def make_box_plot_figure(run_output_dir):
   if len(data_frames) != len(var_list):
     raise RuntimeError("Hmmm, variable list is not equal to the number of loaded pandas DataFrames!")
 
-  fig = plt.figure(figsize=(15,7))
+  fig = plt.figure(figsize=(8.5,11))
   axes = [plt.subplot2grid( (len(var_list), 1), (i,0) ) for i, x in enumerate(var_list)]
 
   for ax, var, df in zip(axes, var_list, data_frames):
@@ -414,7 +423,19 @@ def make_box_plot_figure(run_output_dir):
     ax.set_title(var)
     ax.set_ylabel(config_dict[var]['to_units'])
 
-  plt.show(block=True)
+  for i, ax in enumerate(axes):
+    ax.set_xlabel('')
+    ax.set_xticklabels([])
+    if i == len(axes)-1:
+      ax.set_xlabel("Month")
+      ax.set_xticklabels(dd.columns)
+      #ax.set_xticklabels("Jan,Feb,Mar,Apr,Mar,Jun,Jul,Aug,Sep,Oct,Nov,Dec".split(','))
+
+  #plt.tight_layout()
+  #plt.show(block=True)
+  plt.suptitle("Boxplot for {}".format(run_output_dir))
+  wrtite_file(run_output_dir, "boxplot.pdf")
+
 
 
 def make_timeseries_figure(run_output_dir):
@@ -428,7 +449,7 @@ def make_timeseries_figure(run_output_dir):
   if len(data_frames) != len(var_list):
     raise RuntimeError("Hmmm, variable list is not equal to the number of loaded pandas DataFrames!")
 
-  fig = plt.figure(figsize=(15,7))
+  fig = plt.figure(figsize=(8.5,11))
   axes = [plt.subplot2grid( (len(var_list), 1), (i,0) ) for i, x in enumerate(var_list)]
 
   for ax, var, df in zip(axes, var_list, data_frames):
@@ -438,6 +459,18 @@ def make_timeseries_figure(run_output_dir):
     ax.fill_between(df.index.to_pydatetime(), df.quantile(.025, 1), df[0:].quantile(.975, 1), color='gray', alpha=0.35)
     ax.set_title(var)
     ax.set_ylabel(config_dict[var]['to_units'])
+
+  for i, ax in enumerate(axes):
+    if i == len(axes)-1:
+      ax.set_xlabel("Time")
+    else:
+      ax.set_xticklabels([])    
+
+  plt.suptitle("Timeseries with shaded 95% CI\n{}".format(run_output_dir))
+
+  #plt.show(block=True)
+  wrtite_file(run_output_dir, "timeseries.pdf")
+
 
 
 def modex_smart_find_drivers(run_output_dir):
