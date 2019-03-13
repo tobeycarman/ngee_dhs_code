@@ -8,6 +8,8 @@ import glob
 import errno
 import datetime
 import socket           # for getting hostname
+import argparse
+import textwrap
 import pandas as pd
 import numpy as np
 import cfunits
@@ -248,6 +250,7 @@ def load_ensemble_ts(path, var, year_start, year_end):
     print fl
     raise RuntimeError("Not enough files found!")
   return pd.read_csv(fl[0]).transpose()
+
 
 def load_driving_data(driving_data_path, start='1990-01-01', end='2015-12-1'):
 
@@ -700,7 +703,6 @@ def make_box_plot_figure(run_output_dir):
   wrtite_file(run_output_dir, "boxplot.pdf")
 
 
-
 def make_timeseries_figure(run_output_dir):
   '''Make timeseries figure with a subplot for each available variable.'''
 
@@ -741,19 +743,128 @@ def modex_smart_find_drivers(run_output_dir):
   tree = etree.parse( os.path.join(run_output_dir, 'pecan.METProcess.xml') ) 
   p = os.path.dirname( tree.findall('run/inputs/met/path/path1')[0].text )
   return p
-  plt.show(block=True)
+
+
+def do_it_all(directory):
+
+  make_timeseries_figure(directory)
+  make_box_plot_figure(directory)
+  make_vardecomp_figure(directory)
+
+  hostname = socket.gethostname()
+  if 'modex' in hostname:
+    driving_path = modex_smart_find_drivers(directory)
+  else:
+    print "You might be shit out of luck!"
+    driving_path = "../dvmdostem-input-catalog/cru-ts40_ar5_rcp85_mri-cgcm3_dh_site_1_1x1/"
+
+  make_frs_figure(directory, 'LAI', 'drivers', driving_data_path=driving_path)
+  make_frs_figure(directory, 'HeteroResp', 'drivers', driving_data_path=driving_path)
+  make_frs_figure(directory, 'NPP', 'drivers', driving_data_path=driving_path)
+  make_frs_figure(directory, 'SoilOrgC', 'drivers', driving_data_path=driving_path)
+
+  make_frs_figure(directory, 'LAI', 'HeteroResp')
+  make_frs_figure(directory, 'LAI', 'SoilOrgC')
+  make_frs_figure(directory, 'LAI', 'NPP')
+  #make_frs_figure(directory, 'LAI', 'LAI')
+
+  make_frs_figure(directory, 'HeteroResp', 'SoilOrgC')
+  make_frs_figure(directory, 'HeteroResp', 'NPP')
+  #make_frs_figure(directory, 'HeteroResp', 'LAI')
+  #make_frs_figure(directory, 'HeteroResp', 'HeteroResp')
+
+  make_frs_figure(directory, 'NPP', 'SoilOrgC')
+  #make_frs_figure(directory, 'NPP', 'HeteroResp')
+
+  #make_frs_figure(directory, 'NPP', 'LAI')
+  #make_frs_figure(directory, 'NPP', 'NPP')
+
+  #make_frs_figure(directory, 'SoilOrgC', 'SoilOrgC')
+  #make_frs_figure(directory, 'SoilOrgC', 'NPP')
+  #make_frs_figure(directory, 'SoilOrgC', 'LAI')
+  #make_frs_figure(directory, 'SoilOrgC', 'HeteroResp')
+
+if __name__ == '__main__':
+
+  parser = argparse.ArgumentParser(
+    formatter_class=argparse.RawDescriptionHelpFormatter,
+    description=textwrap.dedent('''
+      Post processing and plotting for pecan runs.
+    ''')
+  )
+  parser.add_argument('--run-directory', nargs=1,
+      #type=argparse.FileType('r'),
+      metavar=('DIRECTORY'), 
+      help=textwrap.dedent('''Path to directory with PEcAn run in it.'''))
+
+  parser.add_argument('--run-suite-directory', nargs=1,
+      #type=argparse.FileType('r'),
+      metavar=('DIRECTORY'), 
+      help=textwrap.dedent('''Path to directory with a bunch of PEcAn runs in it.'''))
+
+  args = parser.parse_args()
+
+  #do_it_all(args.run_directory)
+
+  # slice tuple in this order: 
+  # [u'site', u'cmt', u'output_variable', u'pft', u'param'])
+  #slice_tuple = (slice(None), slice(None), 'NPP', slice(None), slice(None))
+  #slice_tuple = (slice(None), slice(None), 'NPP', 'Betula', slice(None))
+
+  # Each site (all cmts, all pfts) and all variables
+  # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
+  #   slice_tuple = (site, slice(None), slice(None), slice(None), slice(None))
+  #   make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
+
+  # # Look at each community type next to all sites
+  # for cmt in 'cmt04,cmt05,cmt06,cmt07'.split(','):
+  #   slice_tuple = (slice(None), cmt, slice(None), slice(None), slice(None))
+  #   make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
+
+  # slice_tuple = (slice(None), 'cmt06', slice(None), slice(None), slice(None))
+  # make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
+
+  # betula decid feather salix
+  # betual egreen sedges sphag
+  # decid egreen lichen Moss
+  # feather grass sedges spahg
+
+  # # Look at each PFT
+  # for pft in 'Betula Decid Feather Salix EGreen Sedges Sphag Moss Lichen Grasses'.split(' '):
+  #   for v in 'NPP,LAI,SoilOrgC,HeteroResp'.split(','):
+  #     slice_tuple = (slice(None), slice(None), v, pft, slice(None))
+  #     make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
+
+  # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
+  #   for v in 'NPP,LAI,SoilOrgC,HeteroResp'.split(','):
+  #     slice_tuple = (site, slice(None), v, slice(None), slice(None))
+  #     make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
+
+  # [u'site', u'cmt', u'output_variable', u'pft', u'param'])
+  # NOTE: to get only Betula and Decid, use slice(Betula, EGreen), - EGreen does not
+  # exist in cmt04, so it works. Changed file names manually. 
+  # Not sure why I can't get just a tuple to work for the slice??
+  for var in 'NPP,SoilOrgC,HeteroResp'.split(','):
+    slice_tuple = ( slice('dhs_1', 'dhs_5'), 'cmt04', var, slice('Betula','EGreen'), slice(None))
+    make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
+
+  # # Each site (all cmts, all pfts) and NPP
+  # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
+  #   slice_tuple = (site, slice(None), 'NPP', slice(None), slice(None))
+  #   make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
+
+  # # Each site (all cmts, all pfts) and SoilOrgC
+  # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
+  #   slice_tuple = (site, slice(None), 'SoilOrgC', slice(None), slice(None))
+  #   make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
+
+  # # Each site (all cmts, all pfts) and HeteroResp
+  # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
+  #   slice_tuple = (site, slice(None), 'HeteroResp', slice(None), slice(None))
+  #   make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
 
 
 
 
-#make_timeseries_figure("../NGEE_Dec_2018_followup/yearly_runs/dhs_1_cmt04/")
-#make_box_plot_figure("../NGEE_Dec_2018_followup/yearly_runs/dhs_1_cmt04/")
-#make_vardecomp_figure("../NGEE_Dec_2018_followup/yearly_runs/dhs_1_cmt04/")
-#make_frs_figure("../NGEE_Dec_2018_followup/yearly_runs/dhs_1_cmt04", 'LAI', 'HeteroResp')
-#make_frs_figure("../NGEE_Dec_2018_followup/yearly_runs/dhs_1_cmt04", 'LAI', 'SoilOrgC',)
-make_frs_figure("../NGEE_Dec_2018_followup/yearly_runs/dhs_1_cmt04", 'LAI', 'drivers', driving_data_path="../dvmdostem-input-catalog/cru-ts40_ar5_rcp85_mri-cgcm3_dh_site_1_1x1/")
-
-
-
-
+  print "****** DONE ******"
 
