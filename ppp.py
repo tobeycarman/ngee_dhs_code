@@ -122,6 +122,63 @@ def find_available_vars_years(run_output_dir):
   return var_list, syr, eyr
 
 
+def load_all_sensan(run_suite_directory): 
+  '''
+  Examples
+  --------
+
+  tt.loc[(slice('dhs_1','dhs_3'),slice(None),slice('HeteroResp','NPP'), 'Salix', 'ilai'), :]
+
+
+  '''
+
+  def get_site(fp):
+    '''
+    Pulls the site out as the second to last element in an underscore 
+    separated directory name, e.g.:
+        /Users/tobeycarman/Documents/SEL/NGEE_Dec_2018_followup/ngee_dhs_runs/kougorak_cmt04
+    '''
+    return '_'.join(os.path.basename(fp).split('_')[0:-1])
+
+  def get_cmt(fp):
+    '''
+    Pulls the cmt out as the last element in an underscore separated directory
+    name, e.g.:
+        /Users/tobeycarman/Documents/SEL/NGEE_Dec_2018_followup/ngee_dhs_runs/kougorak_cmt04
+    '''
+    return os.path.basename(fp).split('_')[-1]
+
+  #DF = pd.DataFrame({})
+  DFS = []
+  runs = run_suite_directory
+  for run in runs:
+    dfs = []
+    available_variables, sy, ey = find_available_vars_years(run)
+    for var in available_variables:
+      df = load_sensitivity_analysis(run, var, sy, ey, multi_index=True)
+      dfs.append(df)
+    dfB = pd.concat(dfs, keys=available_variables, names=['output_variable'])
+    DFS.append(dfB)
+
+  print zip([os.path.basename(i) for i in runs],[get_site(i) for i in runs],[get_cmt(i) for i in runs])
+
+  DF = pd.concat(DFS, keys=zip([os.path.basename(i) for i in runs],[get_site(i) for i in runs],[get_cmt(i) for i in runs]), names=['key', 'site', 'cmt'])
+  print DF[0:2]
+  new_index = pd.MultiIndex.droplevel(DF.index, level=0)
+  print new_index.levels
+  print new_index.names
+  print ''
+
+  DF.index = new_index
+  print DF[0:2]
+  print ''
+
+  DF_S = DF.sort_index(sort_remaining=True)
+
+  return DF_S
+
+
+
 
 def load_sensitivity_analysis(path, var, year_start, year_end, multi_index=False):
   '''
@@ -170,6 +227,9 @@ def load_sensitivity_analysis(path, var, year_start, year_end, multi_index=False
   # Sort so that all fr_prods come out together
   for df in data_frames:
     df.sort_index(inplace=True, ascending=False)
+
+  if multi_index:
+    return pd.concat(data_frames, keys=[p.split('-')[-1] for p in pfts], names=['pft','param'])
 
   return (pfts, data_frames)
 
@@ -309,20 +369,217 @@ def make_frs_figure(run_output_dir, yax_var, xax_var, driving_data_path=None):
     #plt.show(block=True)
     wrtite_file(run_output_dir, "frs_{}_vs_{}.png".format(yax_var, xax_var))
 
+def string_from_slicetuple(st):
+  level_order = ('site,cmt,outvar,pft,param'.split(','))
+  s = ''
+  for i, lo in zip(st, level_order):
+    print i, lo
+    print ''
+    if type(i) == slice:
+      def f(x):
+        if x is not None:
+          return x
+        else:
+          return ''
+      s += '{}({}-{})_'.format(lo, f(i.start), f(i.stop))
+    elif type(i) == str:
+      s += '{}({})_'.format(lo,i)
+    else:
+      raise RuntimeError("Invalid type in string_from_slicetuple")
+  return s
 
 
+def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclude=[]):
+  '''
+  Parameters
+  ----------
+  run_suite_directory: path to a directory with a collection (suite) of
+      PEcAn:dvmdostem runs. 
+  '''
+
+  # pean runs, so each run is collection of dvmdostem runs (ensemble, SA, etc)
+
+  print "Looking here for a set of pecan:dvmdostem runs: {}".format(run_suite_directory)
+  print "Will exclude these directories if they exist: {}".format(exclude)
+  print os.listdir(run_suite_directory)
+  print ''
 
 
+  run_directories = filter(lambda x: os.path.isdir(os.path.join(os.path.abspath(run_suite_directory), x)), os.listdir(run_suite_directory))
+  print run_directories
+  print ''
+
+  run_directories = filter(lambda y: y not in exclude, run_directories)
+  print run_directories
+  print ''
+
+  runs = map(lambda x: os.path.join(os.path.abspath(run_suite_directory), x), run_directories)
+  print runs
+  print''
+
+  df = load_all_sensan(runs)
+  # This gets us a multiindexed dataframe. The last level of the index is
+  # the parameters (SLA, ilai, etc).
+  #    In [698]: df.index.levels[0:-1]
+  #    Out[698]: FrozenList([
+  #        [u'dhs_1', u'dhs_2', u'dhs_3', u'dhs_4', u'dhs_5', u'kougorak', u'southbarrow'],
+  #        [u'cmt04', u'cmt05', u'cmt06', u'cmt07'],
+  #        [u'HeteroResp', u'LAI', u'NPP', u'SoilOrgC'],
+  #        [u'Betula', u'Decid', u'EGreen', u'Feather', u'Grasses', u'Lichens', u'Moss', u'Salix', u'Sedges', u'Sphag']
+  #     ])
+  #    In [699]: tt.index.names
+  #    Out[699]: FrozenList([u'site', u'cmt', u'output_variable', u'pft', u'param'])
+
+  #
+  #slice_tuple = (slice(None), slice(None), 'NPP', slice(None), slice(None))
+  #slice_tuple = (slice(None), slice(None), 'NPP', 'Betula', slice(None))
 
 
+  #slice_tuple = (slice('dhs_1'), slice(None), slice(None), slice(None), slice(None))
+  print slice_tuple
+  print "==================="
+
+  # Unstacking the index basically puts the index on the columns instead of the
+  # rows. Makes it easy to pass to imshow. We unstack all but the last level, 
+  # which leaves the parameters on the Y axis (rows)
+  cv = df.loc[slice_tuple, 'coef.vars'].sort_index(level='pft')
+  cv_ = cv.unstack(level=(0,1,2,3))
+
+  el = df.loc[slice_tuple, 'elasticities'].sort_index(level='pft')
+  el_ = el.unstack(level=(0,1,2,3))
+
+  pv = df.loc[slice_tuple, 'partial.variances'].sort_index(level='pft')
+  pv_ = pv.unstack(level=(0,1,2,3))
+
+  reduced_param_slice_list = ['SLA','SW_albedo','extinction_coefficient_diffuse','gcmax','klai','labncon']
+  short_name_list = ['sla','sw_albedo','ex_coef_diff','gcmax','klai','labcon']
+  short_name_dict = {}
+  for ln, sn in zip(reduced_param_slice_list, short_name_list):
+    short_name_dict[ln] = sn
+
+  short_name_list = 'sla,sw_alb,cut_cond,ex_coef_dif,fprod10,fprod20,fprod30,fprod40,fprod50,gcmax,ilai,klai,labncon,ppfd50,ptmp_h,ptmp_l,ptmp_mx,ptmp_mn,vpd_close,vpd_open'.split(',')
+  short_name_dict = {}
+  for ln, sn in zip(el_.index, short_name_list):
+    short_name_dict[ln] = sn
+
+  #from IPython import embed; embed()
+
+  # if len(reduced_param_slice_list) != len(short_name_list):
+  #   rasie RuntimeError("Something is wrong with the reduced name and parameter list!")
+
+  def colorbar(mappable):
+    '''Makes the colorbar the same size as the axes.
+    Poached from: https://joseph-long.com/writing/colorbars/ '''
+    ax = mappable.axes
+    fig = ax.figure
+    divider = make_axes_locatable(ax)
+    cax = divider.append_axes("right", size="5%", pad=0.05)
+    return fig.colorbar(mappable, cax=cax)
+
+  W = 10
+  H = 10
+
+  # Dynamic aspect ratio seems to help keep pixels kinda square
+  if len(cv_.columns) <= len(cv_.index):
+    W = H * len(cv_.columns) / len(cv_.index)
+
+  # Problem with tight_layout w/o this bit
+  if W < H/2:
+    W = H/2
+
+  plt.rcParams['font.family'] = 'sans-serif'
+
+  fig = plt.figure(figsize=(W,H))
+
+  ax0 = plt.subplot2grid((3,1), (0,0))
+  ax1 = plt.subplot2grid((3,1), (1,0))
+  ax2 = plt.subplot2grid((3,1), (2,0))
+
+  ax0.set_title("Parameter Uncertainty (coef.variances)", fontsize=9) # Coef. Variance (%)
+  ax1.set_title("Sensitivity (elasticities)", fontsize=9) # Elasticity
+  ax2.set_title("Output Uncertainty (partial.variances)", fontsize=9) # Partial Variance (%)
+
+  img0 = ax0.imshow(cv_, aspect='auto', interpolation='nearest', cmap='viridis_r')
+  img1 = ax1.imshow(el_.loc[reduced_param_slice_list], aspect='auto', interpolation='nearest', cmap='seismic', norm=MidpointNormalize(midpoint=0, vmin=el_.min().min(), vmax=el_.max().max())) # diverging cmap
+  img2 = ax2.imshow(pv_.loc[reduced_param_slice_list], aspect='auto', interpolation='nearest', cmap='plasma_r')
+
+  # for ax, img in zip((ax0,ax1,ax2), (img0, img1,img2)):
+  #   ax.vlines([4.5, 9.5, 14.5], -0.5, img.get_array().shape[0]-0.5, colors='black', linestyle='-', linewidth=.5)
+
+  #diverging maps: Spectral, coolwarm, PiYG, RdYlGn seismic
+
+  # Tick strategy:
+  # - use major ticks for center of pixel (centering label text on pixels)
+  # - use minor ticks for pixel edges, and grid lines
+
+  # y axis, major ticks
+  for ax in [ax0]:
+    ax.set_yticks(np.arange(0, len(cv_.index)))
+    ax.set_yticklabels([short_name_dict[i] for i in cv_.index], fontsize=8)
+  
+  for ax in (ax1,ax2):
+    ax.set_yticks(np.arange(0, len(reduced_param_slice_list)))
+    #ax.set_yticklabels(el_.loc[reduced_param_slice_list].index, fontsize=8)
+    ax.set_yticklabels([short_name_dict[i] for i in el_.loc[reduced_param_slice_list].index], fontsize=8)
+
+  # # x axis, major ticks
+  # for ax in (ax0,ax1):
+  #   ax.set_xticks(np.arange(0, len(cv_.columns)),[])
+  #   ax.set_xticklabels([])
+
+  for ax in [ax0, ax1, ax2]:
+    ax.set_xticks(np.arange(0, len(cv_.columns)))
+    lbls = ["-".join(x) for x in cv_.columns]
+    lbls = [i.replace('Decid', '').replace('Betula', '').replace('dhs_', 'site').replace('-cmt04-',' ').replace('NPP-','').replace('HeteroResp','').replace('SoilOrgC','') for i in lbls]
+    ax.set_xticklabels(lbls, rotation=90, fontsize=8)
+
+  # x and y axis, minor ticks
+  for ax, img in zip([ax0,ax1,ax2],[img0,img1,img2]):
+    nrows, ncols = img.get_array().shape
+    ax.set_xticks(np.arange(-.5, ncols, 1), minor=True);
+    ax.set_yticks(np.arange(-.5, nrows, 1), minor=True);
+
+  # grid
+  for ax in (ax0, ax1, ax2):
+    ax.grid(which='major', axis='both', color='gray', linewidth=0.15, visible=False)
+    ax.grid(which='minor', color='w', linestyle='-', linewidth=3.0)
+
+  # Turn off spines
+  for ax in (ax0,ax1,ax2):
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+
+  # Try getting rid of extra antialiasing border issue
+  # for ax in (ax0,ax1,ax2):
+  #   ax.autoscale(enable=True, axis='both',tight=False)
+
+  # ADD GIT INFO TO BOTTOM LEFT CORNER
+  #import subprocess
+  #subprocess.call(['git describe --all --long'.split(' ')])
+  # OR
+  #export GIT_DESCRIBE_TAG=$(git describe --all --long); ./ppp.py ...
+  plt.annotate('rev: {}'.format(os.environ['GIT_DESCRIBE_TAG']),
+              xy=(0.5, 0), 
+              #xytext=(0, 10),
+              xycoords='figure points', #('axes fraction', 'figure fraction'),
+              #textcoords='offset points',
+              color='gray',
+              size=8, ha='left', va='bottom')
 
 
+  # Turn on the colorbars...
+  colorbar(img0)
+  colorbar(img1)
+  colorbar(img2)
 
+  # Needed to keep labels from overflowing figure bounds...
+  plt.tight_layout()
 
-
-
-
-
+  fname_addition = string_from_slicetuple(slice_tuple)
+  wrtite_file(run_suite_directory, "vd_heatmap_{}.pdf".format(fname_addition))
+  
 
 def make_vardecomp_figure(run_output_dir):
   vl, sy, ey = find_available_vars_years(run_output_dir)
