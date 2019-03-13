@@ -327,71 +327,77 @@ def make_frs_figure(run_output_dir, yax_var, xax_var, driving_data_path=None):
 def make_vardecomp_figure(run_output_dir):
   vl, sy, ey = find_available_vars_years(run_output_dir)
   
-  # Need to put this in a loop over vl
-  pfts, data_frames = load_sensitivity_analysis(run_output_dir, vl[0], sy, ey)
+  for v in vl:
+    # Need to put this in a loop over vl
+    pfts, data_frames = load_sensitivity_analysis(run_output_dir, v, sy, ey)
 
-  fig = plt.figure(figsize=(15,7))
-  ax0 = plt.subplot2grid((1, 3), (0, 0))
-  ax1 = plt.subplot2grid((1, 3), (0, 1))
-  ax2 = plt.subplot2grid((1, 3), (0, 2))
+    fig = plt.figure(figsize=(8.5,11))
+    ax0 = plt.subplot2grid((1, 3), (0, 0))
+    ax1 = plt.subplot2grid((1, 3), (0, 1))
+    ax2 = plt.subplot2grid((1, 3), (0, 2))
 
-  ax0.set_title("Parameter Uncertainty") # Coef. Variance (%)
-  ax1.set_title("Sensitivity") # Elasticity
-  ax2.set_title("Output Uncertainty") # Partial Variance (%)
-  
-  for i, (pft, df) in enumerate(zip(pfts, data_frames)):
-    yoffset = 0.9 - 0.80/len(pfts) - (i * 0.80/len(pfts)) # add from top to bottom, helps to match ledgend order.
-    y_values = np.arange(yoffset, len(df.index), 1)
-    height_values = np.ones(len(df.index)) * 0.80/len(pfts)
-  
-    #   barh(y, width, height, left)
-    ax0.barh(y_values, df['coef.vars'],         height_values, align='edge', alpha=0.75, label=pft)
-    ax1.barh(y_values, df['elasticities'],      height_values, align='edge', alpha=0.75, label=pft)
-    ax2.barh(y_values, df['partial.variances'], height_values, align='edge', alpha=0.75, label=pft)
+    ax0.set_title("Parameter Uncertainty") # Coef. Variance (%)
+    ax1.set_title("Sensitivity") # Elasticity
+    ax2.set_title("Output Uncertainty") # Partial Variance (%)
+    
+    for i, (pft, df) in enumerate(zip(pfts, data_frames)):
+      yoffset = 0.9 - 0.80/len(pfts) - (i * 0.80/len(pfts)) # add from top to bottom, helps to match ledgend order.
+      y_values = np.arange(yoffset, len(df.index), 1)
+      height_values = np.ones(len(df.index)) * 0.80/len(pfts)
+    
+      #   barh(y, width, height, left)
+      ax0.barh(y_values, df['coef.vars'],         height_values, align='edge', alpha=0.75, label=pft)
+      ax1.barh(y_values, df['elasticities'],      height_values, align='edge', alpha=0.75, label=pft)
+      ax2.barh(y_values, df['partial.variances'], height_values, align='edge', alpha=0.75, label=pft)
 
 
-  # major y ticks - no labels, use grid for dividing params
-  ax0.set_yticklabels([], minor=False)
+    # major y ticks - no labels, use grid for dividing params
+    ax0.set_yticklabels([], minor=False)
 
-  # minor y ticks - use for labeling parameters
-  ax0.set_yticks(np.arange(.5, len(data_frames[0].index), 1), minor=True)
-  ax0.set_yticklabels(data_frames[0].index, minor=True)
+    # minor y ticks - use for labeling parameters
+    ax0.set_yticks(np.arange(.5, len(data_frames[0].index), 1), minor=True)
+    ax0.set_yticklabels(data_frames[0].index, minor=True)
 
-  for a in [ax0, ax1, ax2]:
-    # handle major ticks
-    a.set_yticklabels([])
-    a.set_yticks(np.arange(1, len(data_frames[0].index), 1), minor=False)
-    a.grid(which='major', axis='y', visible=True)
+    for a in [ax0, ax1, ax2]:
+      # handle major ticks
+      a.set_yticklabels([])
+      a.set_yticks(np.arange(1, len(data_frames[0].index), 1), minor=False)
+      a.grid(which='major', axis='y', visible=True)
 
-    a.xaxis.set_major_locator(MaxNLocator(3))   
-    a.ticklabel_format(style='plain', axis='x')
+      a.xaxis.set_major_locator(MaxNLocator(3))   
+      a.ticklabel_format(style='plain', axis='x')
 
-    for x in a.get_xticklabels():
-      pass
-      #x.set_rotation(75)
+      for x in a.get_xticklabels():
+        pass
+        #x.set_rotation(75)
 
-  for a in [ax0, ax1]:
-    #a.set_axis_bgcolor((1,1,1,0))
-    a.set_facecolor((1,1,1,0))
-    a.spines['left'].set_visible(False)
-    a.spines['top'].set_visible(False)
-    a.spines['right'].set_visible(False)
+    for a in [ax0, ax1]:
+      #a.set_axis_bgcolor((1,1,1,0))
+      a.set_facecolor((1,1,1,0))
+      a.spines['left'].set_visible(False)
+      a.spines['top'].set_visible(False)
+      a.spines['right'].set_visible(False)
 
-  #plt.tight_layout()
-  plt.suptitle("Variance Decomp. {}".format('???'))
+    # (left, bottom, right, top) in the normalized figure coordinate that the
+    # whole subplots area (including labels) will fit into.
+    # Default is (0, 0, 1, 1).
+    plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 
-  # Shrink current axis's height by 10% on the bottom
-  for ax in [ax0, ax1, ax2]:
-    box = ax.get_position()
-    ax.set_position([box.x0, box.y0 + box.height * 0.1,
-                     box.width, box.height * 0.9])
+    plt.suptitle("Variance Decomposition for {}\n{}".format(v, run_output_dir))
 
-  # Put a legend below current axis
-  ax1.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
-            #fancybox=True, shadow=True, 
-            ncol=1)
+    # Shrink current axis's height by 10% on the bottom
+    for ax in [ax0, ax1, ax2]:
+      box = ax.get_position()
+      ax.set_position([box.x0, box.y0 + box.height * 0.1,
+                       box.width, box.height * 0.9])
 
-  plt.show(block=True)
+    # Put a legend below current axis
+    ax1.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
+              #fancybox=True, shadow=True, 
+              ncol=1)
+
+    #plt.show(block=True)
+    wrtite_file(run_output_dir, "variance_decomposition_{}.pdf".format(v))
 
 
 def make_box_plot_figure(run_output_dir):
