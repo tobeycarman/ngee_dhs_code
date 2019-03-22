@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# T Carman, Spring 2019
+
+# This script is for converting PEcAn .Rdata output files to 
+# .csv so that they can be easily imported to Python's Pandas
+# library for further analysis and plotting.
+
 function usage() {
   echo "Usage:
     $ ./rdata2csv.sh path/to/pecan/dir

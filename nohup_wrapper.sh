@@ -1,5 +1,23 @@
 #!/bin/bash
 
+# T. Carman, 2019
+
+# A script for submitting pecan runs over the command line
+# (instead of the web interface). 
+#
+# Assumes that you have a pecan.xml file in a directory
+# that will be used for the pecan run(s). A log file will
+# be saved there as well. **NOTE** this script will clean
+# the directory of everything but the pecan.xml file 
+# before it starts.
+# 
+# Assumes that you have a workflow.R script next to this script.
+#
+# **NOTE** killing the process won't work correctly after the
+# model jobs have launched, so you only have a few minutes at
+# the beginning to stop things. Once we start using the 
+# modellauncher part of PEcAn, this should be less of a problem.
+#
 
 PECANFILE=$1
 

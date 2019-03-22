@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# T Carman Spring 2019
+
 function usage() {
   echo "Usage:
     $ ./ph_nohup_wrapper.sh path/to/pecan/dir

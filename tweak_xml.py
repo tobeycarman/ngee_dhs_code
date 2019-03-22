@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+# T. Carman, Spring 2019
+
+# A quick 'n dirty helper script for adjusting the pecan.xml file
+# when doing several similar pecan runs.
+
+
 import os
 import sys
 import datetime
