@@ -16,7 +16,7 @@ fi
 
 WORKING_DIR=$1  # e.g.: ngee_dhs_runs/dhs_1_cmt04
 
-nohup ./posthoc_easa.R "$WORKING_DIR" LAI HeteroResp SoilOrgC > "$WORKING_DIR"/posthoc_easa.log 2>&1 &
+nohup ./posthoc_easa.R "$WORKING_DIR" LAI HeteroResp SoilOrgC VegC NPP > "$WORKING_DIR"/posthoc_easa.log 2>&1 &
 
 echo $! > "$WORKING_DIR"/save_ease_pid.txt
 
