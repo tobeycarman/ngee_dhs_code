@@ -423,7 +423,7 @@ def string_from_slicetuple(st):
   return s
 
 
-def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclude=[]):
+def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclude=[], show_param_uncertainty=False):
   '''
   Parameters
   ----------
@@ -525,15 +525,15 @@ def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclud
 
   fig = plt.figure(figsize=(W,H))
 
-  ax0 = plt.subplot2grid((3,1), (0,0))
-  ax1 = plt.subplot2grid((3,1), (1,0))
-  ax2 = plt.subplot2grid((3,1), (2,0))
+  #ax0 = plt.subplot2grid((3,1), (0,0))
+  ax1 = plt.subplot2grid((2,1), (0,0))
+  ax2 = plt.subplot2grid((2,1), (1,0))
 
-  ax0.set_title("Parameter Uncertainty (coef.variances)", fontsize=9) # Coef. Variance (%)
+  #ax0.set_title("Parameter Uncertainty (coef.variances)", fontsize=9) # Coef. Variance (%)
   ax1.set_title("Sensitivity (elasticities)", fontsize=9) # Elasticity
   ax2.set_title("Output Uncertainty (partial.variances)", fontsize=9) # Partial Variance (%)
 
-  img0 = ax0.imshow(cv_, aspect='auto', interpolation='nearest', cmap='viridis_r')
+  #img0 = ax0.imshow(cv_, aspect='auto', interpolation='nearest', cmap='viridis_r')
   img1 = ax1.imshow(el_.loc[reduced_param_slice_list], aspect='auto', interpolation='nearest', cmap='seismic', norm=MidpointNormalize(midpoint=0, vmin=el_.min().min(), vmax=el_.max().max())) # diverging cmap
   img2 = ax2.imshow(pv_.loc[reduced_param_slice_list], aspect='auto', interpolation='nearest', cmap='plasma_r')
 
@@ -546,9 +546,10 @@ def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclud
   # - use major ticks for center of pixel (centering label text on pixels)
   # - use minor ticks for pixel edges, and grid lines
 
+
   # y axis, major ticks
-  for ax in [ax0]:
-    ax.set_yticks(np.arange(0, len(cv_.index)))
+  for ax in [ax1]:
+    ax.set_yticks(np.arange(0, len(reduced_param_slice_list)))
     ax.set_yticklabels([short_name_dict[i] for i in cv_.index], fontsize=8)
   
   for ax in (ax1,ax2):
@@ -561,25 +562,85 @@ def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclud
   #   ax.set_xticks(np.arange(0, len(cv_.columns)),[])
   #   ax.set_xticklabels([])
 
-  for ax in [ax0, ax1, ax2]:
+  # Poached (and adapted) from Ramon Crehuet's answer here:
+  # https://stackoverflow.com/questions/31845258/pandas-multi-index-plotting
+  def add_line(ax, xpos, ypos, yextra=0):
+    line = plt.Line2D([xpos, xpos], [ypos + .1, ypos + yextra],
+                      transform=ax.transAxes, color='gray')
+    line.set_clip_on(False)
+    ax.add_line(line)
+
+  def label_len(my_index,level):
+    labels = my_index.get_level_values(level)
+    return [(k, sum(1 for i in g)) for k,g in itertools.groupby(labels)]
+
+  def label_group_bar_table(ax, df):
+
+    l = []
+    for level in range(0, df.columns.nlevels):
+      number_ticks = len([(k, g.next()) for k,g in itertools.groupby(df.columns.get_level_values(level))])
+      print "level: {}   num ticks: {}".format(level, number_ticks)
+      l.append((level, number_ticks))
+    l = sorted(l, key=lambda x: x[1], reverse=True)
+
+    ypos = -.1
+    scale = 1./df.columns.size
+    yadj = None
+    for idx, (level, _) in enumerate(l):
+      if idx == 0:
+        #1.0 / max([len(i) for i in df.columns.levels[level]])
+        yadj = 3  * 1.0 / max([len(i) for i in df.columns.levels[level]])
+      else:
+        pass
+
+
+    for idx, (level, _) in enumerate(l):
+      print "====>>", ypos, yadj, yadj-.1
+      pos = 0
+      for label, rpos in label_len(df.columns,level):
+        lxpos = (pos + .5 * rpos)*scale
+        if idx == 0:
+          # For the first level we gotta rotate and figure out how thick to 
+          # make the band
+          ax.text(lxpos, ypos, label, ha='center', fontsize='xx-small', rotation=90, transform=ax.transAxes)
+          add_line(ax, pos*scale, ypos, yextra=-(yadj-0.1))
+        else:
+          ax.text(lxpos, ypos, label, ha='center', fontsize='x-small', rotation=0, transform=ax.transAxes)
+          add_line(ax, pos*scale, ypos)
+        pos += rpos
+      #add_line(ax, pos*scale, ypos)
+
+      if idx == 0:
+        add_line(ax, pos*scale, ypos, yextra=-(yadj-0.1))
+        ypos -= yadj # E.g. 0.5
+      else:
+        add_line(ax, pos*scale, ypos)
+        ypos -= .1
+
+  label_group_bar_table(ax2, el_.loc[reduced_param_slice_list])
+  plt.subplots_adjust(bottom=0.25)
+  #from IPython import embed; embed()
+
+  for ax in [ax1, ax2]:
     ax.set_xticks(np.arange(0, len(cv_.columns)))
     lbls = ["-".join(x) for x in cv_.columns]
-    lbls = [i.replace('Decid', '').replace('Betula', '').replace('dhs_', 'site').replace('-cmt04-',' ').replace('NPP-','').replace('HeteroResp','').replace('SoilOrgC','') for i in lbls]
-    ax.set_xticklabels(lbls, rotation=90, fontsize=8)
+    #lbls = [i.replace('Decid', '').replace('Betula', '').replace('dhs_', 'site').replace('-cmt04-',' ').replace('NPP-','').replace('HeteroResp','').replace('SoilOrgC','') for i in lbls]
+    ax.set_xticklabels([])
+    #ax.set_xticklabels(lbls, rotation=90, fontsize=8)
 
   # x and y axis, minor ticks
-  for ax, img in zip([ax0,ax1,ax2],[img0,img1,img2]):
+  for ax, img in zip([ax1,ax2],[img1,img2]):
     nrows, ncols = img.get_array().shape
     ax.set_xticks(np.arange(-.5, ncols, 1), minor=True);
     ax.set_yticks(np.arange(-.5, nrows, 1), minor=True);
 
   # grid
-  for ax in (ax0, ax1, ax2):
+  for ax in (ax1, ax2):
     ax.grid(which='major', axis='both', color='gray', linewidth=0.15, visible=False)
     ax.grid(which='minor', color='w', linestyle='-', linewidth=3.0)
 
   # Turn off spines
-  for ax in (ax0,ax1,ax2):
+  for ax in (ax1,ax2):
     ax.spines['right'].set_visible(False)
     ax.spines['top'].set_visible(False)
     ax.spines['bottom'].set_visible(False)
@@ -592,12 +653,12 @@ def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclud
   _ = provenance_annotate(ax1)
 
   # Turn on the colorbars...
-  colorbar(img0)
+  #colorbar(img0)
   colorbar(img1)
   colorbar(img2)
 
   # Needed to keep labels from overflowing figure bounds...
-  plt.tight_layout()
+  #plt.tight_layout()
 
   fname_addition = string_from_slicetuple(slice_tuple)
   wrtite_file(run_suite_directory, "vd_heatmap_{}.pdf".format(fname_addition))
@@ -814,27 +875,12 @@ def do_it_all(directory):
   #make_frs_figure(directory, 'SoilOrgC', 'HeteroResp')
   #make_frs_figure(directory, 'SoilOrgC', 'SoilOrgC')
 
-if __name__ == '__main__':
 
-  parser = argparse.ArgumentParser(
-    formatter_class=argparse.RawDescriptionHelpFormatter,
-    description=textwrap.dedent('''
-      Post processing and plotting for pecan runs.
-    ''')
-  )
-  parser.add_argument('--run-directory', nargs=1,
-      #type=argparse.FileType('r'),
-      metavar=('DIRECTORY'), 
-      help=textwrap.dedent('''Path to directory with PEcAn run in it.'''))
+def do_vardecomp_heatmaps(directory):
 
-  parser.add_argument('--run-suite-directory', nargs=1,
-      #type=argparse.FileType('r'),
-      metavar=('DIRECTORY'), 
-      help=textwrap.dedent('''Path to directory with a bunch of PEcAn runs in it.'''))
-
-  args = parser.parse_args()
-
-  #do_it_all(args.run_directory)
+  slice_tuple = (slice(None), slice(None), slice(None), slice(None), slice(None))
+  make_boxplot_2(directory, slice_tuple, exclude=['yearly_runs','plots'])
+  sys.exit()
 
   # slice tuple in this order: 
   # [u'site', u'cmt', u'output_variable', u'pft', u'param'])
@@ -904,6 +950,36 @@ if __name__ == '__main__':
   #   make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
 
 
+
+if __name__ == '__main__':
+
+  parser = argparse.ArgumentParser(
+    formatter_class=argparse.RawDescriptionHelpFormatter,
+    description=textwrap.dedent('''
+      Post processing and plotting for pecan runs.
+    ''')
+  )
+  parser.add_argument('--run-directory', nargs=1,
+      #type=argparse.FileType('r'),
+      metavar=('DIRECTORY'), 
+      help=textwrap.dedent('''Path to directory with PEcAn run in it.'''))
+
+  parser.add_argument('--run-suite-directory', nargs=1,
+      #type=argparse.FileType('r'),
+      metavar=('DIRECTORY'), 
+      help=textwrap.dedent('''Path to directory with a bunch of PEcAn runs in it.'''))
+
+  args = parser.parse_args()
+
+  print args
+
+  # This is the original set of plots - timeseries, boxplot, variance decomp, frs
+  if args.run_directory is not None:
+    do_it_all(args.run_directory[0])
+
+  # This is the newer variance decomp. heatmaps
+  if args.run_suite_directory is not None:
+    do_vardecomp_heatmaps(args.run_suite_directory[0])
 
 
   print "****** DONE ******"
