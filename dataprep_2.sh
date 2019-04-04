@@ -68,8 +68,9 @@ done
 #rsync -avz --exclude "*/out/*" --exclude "*/run/*" modex.bnl.gov:/data/tcarman/ngee_dhs_runs/dhs_1_cmt04 ngee_dhs_runs/
 
 # Copy to local
+# NOTE: --delete removes extraneous files from destination!
 cd /Users/tobeycarman/Documents/SEL/NGEE_Dec_2018_followup
-rsync -avz --delte --exclude "*/out/*" --exclude "*/run/*" --exclude="*/yearly_runs/*" modex.bnl.gov:/data/tcarman/ngee_dhs_runs .
+rsync -avz --delete --exclude "*/out/*" --exclude "*/run/*" --exclude="*/yearly_runs/*" modex.bnl.gov:/data/tcarman/ngee_dhs_runs .
 
 
 # Clean up some old cruft
@@ -118,7 +119,7 @@ for f in $(find . -wholename "*/plots/*");
 do
   cp $f ~/Downloads/testbed/$(echo $f | python -c "import sys; s = sys.stdin.read(); s2 = s.strip().strip('.').strip('/').split('/')[0]; sys.stdout.write(s2)")_$(basename "$f")
 done
-
+cd -
 
 
 
