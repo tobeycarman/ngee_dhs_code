@@ -81,6 +81,26 @@ def wrtite_file(directory, name):
   plt.savefig(of)
 
 
+def provenance_annotate(axes_instance):
+  '''Works from figure coords, so you can pass any axes that might be on a figure.'''
+
+  # ADD GIT INFO TO BOTTOM LEFT CORNER
+  #import subprocess
+  #subprocess.call(['git describe --all --long'.split(' ')])
+  # OR
+  #export GIT_DESCRIBE_TAG=$(git describe --all --long); ./ppp.py ...
+  annotation = axes_instance.annotate(
+      'date: {} rev: {}'.format(datetime.datetime.now(), os.environ['GIT_DESCRIBE_TAG']),
+      xy=(0.5, 0), 
+      #xytext=(0, 10),
+      xycoords='figure points', #('axes fraction', 'figure fraction'),
+      #textcoords='offset points',
+      color='gray',
+      size=8, ha='left', va='bottom'
+  )
+
+  return annotation
+
 def df_convert_index(dataFrame, start="1-1-1990"):
 
   var, ens_member = dataFrame.index[0].split(".")
@@ -336,7 +356,8 @@ def make_frs_figure(run_output_dir, yax_var, xax_var, driving_data_path=None):
 
     plt.suptitle("{} vs driving variables\n{}\n{}".format(yax_var, driving_data_path, run_output_dir))
 
-    #from IPython import embed; embed()
+    _ = provenance_annotate(ax0)
+
     #plt.show(block=True)
     wrtite_file(run_output_dir, "frs_driver_vs_{}.pdf".format(yax_var))
 
@@ -368,6 +389,8 @@ def make_frs_figure(run_output_dir, yax_var, xax_var, driving_data_path=None):
     ax1.set_ylabel("{} {}".format(yax_var, config_dict[yax_var]['to_units']))
 
     plt.suptitle("{} vs {}\n{}".format(yax_var, xax_var, run_output_dir))
+
+    _ = provenance_annotate(ax0)
 
     #plt.show(block=True)
     wrtite_file(run_output_dir, "frs_{}_vs_{}.png".format(yax_var, xax_var))
@@ -558,19 +581,7 @@ def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclud
   # for ax in (ax0,ax1,ax2):
   #   ax.autoscale(enable=True, axis='both',tight=False)
 
-  # ADD GIT INFO TO BOTTOM LEFT CORNER
-  #import subprocess
-  #subprocess.call(['git describe --all --long'.split(' ')])
-  # OR
-  #export GIT_DESCRIBE_TAG=$(git describe --all --long); ./ppp.py ...
-  plt.annotate('rev: {}'.format(os.environ['GIT_DESCRIBE_TAG']),
-              xy=(0.5, 0), 
-              #xytext=(0, 10),
-              xycoords='figure points', #('axes fraction', 'figure fraction'),
-              #textcoords='offset points',
-              color='gray',
-              size=8, ha='left', va='bottom')
-
+  _ = provenance_annotate(ax1)
 
   # Turn on the colorbars...
   colorbar(img0)
@@ -656,6 +667,8 @@ def make_vardecomp_figure(run_output_dir):
               #fancybox=True, shadow=True, 
               ncol=1)
 
+    _ = provenance_annotate(ax1)
+
     #plt.show(block=True)
     wrtite_file(run_output_dir, "variance_decomposition_{}.pdf".format(v))
 
@@ -697,6 +710,8 @@ def make_box_plot_figure(run_output_dir):
       ax.set_xticklabels(dd.columns)
       #ax.set_xticklabels("Jan,Feb,Mar,Apr,Mar,Jun,Jul,Aug,Sep,Oct,Nov,Dec".split(','))
 
+  _ = provenance_annotate(axes[0])
+
   #plt.tight_layout()
   #plt.show(block=True)
   plt.suptitle("Boxplot for {}".format(run_output_dir))
@@ -732,6 +747,9 @@ def make_timeseries_figure(run_output_dir):
       ax.set_xticklabels([])    
 
   plt.suptitle("Timeseries with shaded 95% CI\n{}".format(run_output_dir))
+
+  #from IPython import embed; embed()
+  _ = provenance_annotate(axes[0])
 
   #plt.show(block=True)
   wrtite_file(run_output_dir, "timeseries.pdf")
