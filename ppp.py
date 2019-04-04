@@ -379,22 +379,19 @@ def make_frs_figure(run_output_dir, yax_var, xax_var, driving_data_path=None):
 
     fig = plt.figure(figsize=(15,7))
 
-    ax0 = plt.subplot2grid((1,2), (0, 0))
-    ax1 = plt.subplot2grid((1,2), (0, 1))
+    # Tried 2 panels, left for *all* points and right for the ensemble means.
+    # looked neat, but the left panel suffers from "saturation" because there 
+    # are too many points so when enough overlap, we over-top the color scale
+    # and info is lost; so the plot is misleading.
+    ax0 = plt.subplot2grid((1,1), (0, 0))
 
     print "yax var {} has {} timseries points for {} ensemble members for a total of {} points".format(yax_var, yax_data.shape[0], yax_data.shape[1], yax_data.size)
     print "xax var {} has {} timseries points for {} ensemble members for a total of {} points".format(xax_var, xax_data.shape[0], xax_data.shape[1], xax_data.size)
 
-
-    ax0.set_title("All Ensemble Members ({}x{}={}points)".format(yax_data.shape[0], yax_data.shape[1], yax_data.size))
-    p0 = ax0.plot(xax_data, yax_data, alpha=0.005, marker='o', linewidth=0.0, color='red')
+    ax0.set_title("Ensemble Mean ({}x{}={}points)".format(yax_data.mean(axis=1).shape[0], 1, yax_data.mean(axis=1).size))
+    p0 = ax0.scatter(xax_data.mean(axis=1), yax_data.mean(axis=1), alpha=0.25, marker='o', linewidth=0.0, color='blue')
     ax0.set_xlabel("{} {}".format(xax_var, config_dict[xax_var]['to_units']))
     ax0.set_ylabel("{} {}".format(yax_var, config_dict[yax_var]['to_units']))
-
-    ax1.set_title("Ensemble Mean ({}x{}={}points)".format(yax_data.mean(axis=1).shape[0], 1, yax_data.mean(axis=1).size))
-    p1 = ax1.scatter(xax_data.mean(axis=1), yax_data.mean(axis=1), alpha=0.25, marker='o', linewidth=0.0, color='blue')
-    ax1.set_xlabel("{} {}".format(xax_var, config_dict[xax_var]['to_units']))
-    ax1.set_ylabel("{} {}".format(yax_var, config_dict[yax_var]['to_units']))
 
     plt.suptitle("{} vs {}\n{}".format(yax_var, xax_var, run_output_dir))
 
@@ -776,7 +773,8 @@ def make_box_plot_figure(run_output_dir):
     ax.set_xticklabels([])
     if i == len(axes)-1:
       ax.set_xlabel("Month")
-      ax.set_xticklabels(dd.columns)
+      ax.set_xticklabels(dd.columns, rotation=45, ha='right')
+
       #ax.set_xticklabels("Jan,Feb,Mar,Apr,Mar,Jun,Jul,Aug,Sep,Oct,Nov,Dec".split(','))
 
   _ = provenance_annotate(axes[0])
