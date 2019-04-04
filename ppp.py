@@ -5,6 +5,7 @@
 
 import os
 import glob
+import itertools
 import errno
 import datetime
 import socket           # for getting hostname
@@ -36,7 +37,11 @@ config_dict = {
   'SoilOrgC': {
     'from_units': 'kg C m-2',
     'to_units': 'g C m-2',
-  }
+  },
+  'VegC': {
+    'from_units': 'kg C m-2',
+    'to_units': 'g C m-2',
+  },
 }
 
 # set the colormap and centre the colorbar
@@ -141,6 +146,9 @@ def find_available_vars_years(run_output_dir):
   syr = syrs.pop()
   eyr = eyrs.pop()
 
+  custom_order=['NPP','LAI','VegC','HeteroResp','SoilOrgC']
+
+  var_list = sorted(var_list, key=lambda x: custom_order.index(x))
   return var_list, syr, eyr
 
 
@@ -780,27 +788,31 @@ def do_it_all(directory):
   make_frs_figure(directory, 'HeteroResp', 'drivers', driving_data_path=driving_path)
   make_frs_figure(directory, 'NPP', 'drivers', driving_data_path=driving_path)
   make_frs_figure(directory, 'SoilOrgC', 'drivers', driving_data_path=driving_path)
+  make_frs_figure(directory, 'VegC', 'drivers', driving_data_path=driving_path)
 
   make_frs_figure(directory, 'LAI', 'HeteroResp')
   make_frs_figure(directory, 'LAI', 'SoilOrgC')
   make_frs_figure(directory, 'LAI', 'NPP')
+  make_frs_figure(directory, 'LAI', 'VegC')
   #make_frs_figure(directory, 'LAI', 'LAI')
 
   make_frs_figure(directory, 'HeteroResp', 'SoilOrgC')
   make_frs_figure(directory, 'HeteroResp', 'NPP')
+  make_frs_figure(directory, 'HeteroResp', 'VegC')
   #make_frs_figure(directory, 'HeteroResp', 'LAI')
   #make_frs_figure(directory, 'HeteroResp', 'HeteroResp')
 
   make_frs_figure(directory, 'NPP', 'SoilOrgC')
+  make_frs_figure(directory, 'NPP', 'VegC')
   #make_frs_figure(directory, 'NPP', 'HeteroResp')
-
   #make_frs_figure(directory, 'NPP', 'LAI')
   #make_frs_figure(directory, 'NPP', 'NPP')
 
-  #make_frs_figure(directory, 'SoilOrgC', 'SoilOrgC')
+  make_frs_figure(directory, 'SoilOrgC', 'VegC')
   #make_frs_figure(directory, 'SoilOrgC', 'NPP')
   #make_frs_figure(directory, 'SoilOrgC', 'LAI')
   #make_frs_figure(directory, 'SoilOrgC', 'HeteroResp')
+  #make_frs_figure(directory, 'SoilOrgC', 'SoilOrgC')
 
 if __name__ == '__main__':
 
@@ -829,10 +841,20 @@ if __name__ == '__main__':
   #slice_tuple = (slice(None), slice(None), 'NPP', slice(None), slice(None))
   #slice_tuple = (slice(None), slice(None), 'NPP', 'Betula', slice(None))
 
+  #slice_tuple = (slice('dhs_1', 'dhs_3'),slice(None),slice('LAI','VegC'),'Betula',slice(None))
+  #make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
+
+
+  #for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
+  for outvar in 'VegC,LAI,SoilOrgC,HeteroResp,NPP'.split(','):
+    for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
+      slice_tuple = (site,slice(None),outvar,slice(None),slice(None))
+      make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
+
   # Each site (all cmts, all pfts) and all variables
   # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
   #   slice_tuple = (site, slice(None), slice(None), slice(None), slice(None))
-  #   make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
+  #   make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
 
   # # Look at each community type next to all sites
   # for cmt in 'cmt04,cmt05,cmt06,cmt07'.split(','):
@@ -862,9 +884,9 @@ if __name__ == '__main__':
   # NOTE: to get only Betula and Decid, use slice(Betula, EGreen), - EGreen does not
   # exist in cmt04, so it works. Changed file names manually. 
   # Not sure why I can't get just a tuple to work for the slice??
-  for var in 'NPP,SoilOrgC,HeteroResp'.split(','):
-    slice_tuple = ( slice('dhs_1', 'dhs_5'), 'cmt04', var, slice('Betula','EGreen'), slice(None))
-    make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
+  # for var in 'NPP,SoilOrgC,HeteroResp'.split(','):
+  #   slice_tuple = ( slice('dhs_1', 'dhs_5'), 'cmt04', var, slice('Betula','EGreen'), slice(None))
+  #   make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
 
   # # Each site (all cmts, all pfts) and NPP
   # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
