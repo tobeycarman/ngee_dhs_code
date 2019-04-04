@@ -853,7 +853,7 @@ if __name__ == '__main__':
   #   slice_tuple = (site, slice(None), 'NPP', slice(None), slice(None))
   #   make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
 
-  # # Each site (all cmts, all pfts) and SoilOrgC
+  # Each site (all cmts, all pfts) and SoilOrgC
   # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
   #   slice_tuple = (site, slice(None), 'SoilOrgC', slice(None), slice(None))
   #   make_heatmap_variance_decomposition(args.run_suite_directory[0], slice_tuple, exclude=['yearly_runs', 'plots'])
