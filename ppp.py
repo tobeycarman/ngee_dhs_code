@@ -493,6 +493,13 @@ def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclud
   for ln, sn in zip(el_.index, short_name_list):
     short_name_dict[ln] = sn
 
+  reduced_param_slice_list = el_.index
+
+  print "[[[[[[[[[[[[]]]]]]]]]]]]]]]"
+  print ""
+  print "{}  to  {}".format(el_.min().min(), el_.max().max())
+  print ""
+  print "[[[[[[[[[[[[]]]]]]]]]]]]]]]"
   #from IPython import embed; embed()
 
   # if len(reduced_param_slice_list) != len(short_name_list):
@@ -531,9 +538,11 @@ def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclud
   ax2.set_title("Output Uncertainty (partial.variances)", fontsize=9) # Partial Variance (%)
 
   #img0 = ax0.imshow(cv_, aspect='auto', interpolation='nearest', cmap='viridis_r')
-  img1 = ax1.imshow(el_.loc[reduced_param_slice_list], aspect='auto', interpolation='nearest', cmap='seismic', norm=MidpointNormalize(midpoint=0, vmin=el_.min().min(), vmax=el_.max().max())) # diverging cmap
-  img2 = ax2.imshow(pv_.loc[reduced_param_slice_list], aspect='auto', interpolation='nearest', cmap='plasma_r')
+  img1 = ax1.imshow(el_.loc[reduced_param_slice_list], aspect='auto', interpolation='nearest', cmap='seismic', norm=MidpointNormalize(midpoint=0, vmin=-0.4, vmax=0.2)) # diverging cmap
+  #img1 = ax1.imshow(el_.loc[reduced_param_slice_list], aspect='auto', interpolation='nearest', cmap='seismic', norm=MidpointNormalize(midpoint=0, vmin=el_.min().min(), vmax=el_.max().max())) # diverging cmap
+  img2 = ax2.imshow(pv_.loc[reduced_param_slice_list], aspect='auto', interpolation='nearest', cmap='plasma_r', vmin=0, vmax=1)
 
+  plt.subplots_adjust(left=0.25)
   # for ax, img in zip((ax0,ax1,ax2), (img0, img1,img2)):
   #   ax.vlines([4.5, 9.5, 14.5], -0.5, img.get_array().shape[0]-0.5, colors='black', linestyle='-', linewidth=.5)
 
@@ -876,9 +885,9 @@ def do_it_all(directory):
 
 def do_vardecomp_heatmaps(directory):
 
-  slice_tuple = (slice(None), slice(None), slice(None), slice(None), slice(None))
-  make_boxplot_2(directory, slice_tuple, exclude=['yearly_runs','plots'])
-  sys.exit()
+  # slice_tuple = (slice(None), slice(None), slice(None), slice(None), slice(None))
+  # make_boxplot_2(directory, slice_tuple, exclude=['yearly_runs','plots'])
+  # sys.exit()
 
   # slice tuple in this order: 
   # [u'site', u'cmt', u'output_variable', u'pft', u'param'])
@@ -888,12 +897,26 @@ def do_vardecomp_heatmaps(directory):
   #slice_tuple = (slice('dhs_1', 'dhs_3'),slice(None),slice('LAI','VegC'),'Betula',slice(None))
   #make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
 
+  # left panel
+  slice_tuple = (slice(None), 'cmt06', 'NPP', slice(None), slice(None))
+  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
 
-  #for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
-  for outvar in 'VegC,LAI,SoilOrgC,HeteroResp,NPP'.split(','):
-    for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
-      slice_tuple = (site,slice(None),outvar,slice(None),slice(None))
-      make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
+  # right panel
+  slice_tuple = (slice(None), 'cmt04', 'NPP', slice(None), slice(None))
+  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
+
+
+  # heatmap-compare-sites
+  # for cmt in 'cmt04,cmt05,cmt06,cmt07'.split(','):
+  #   for outvar in 'VegC,LAI,SoilOrgC,HeteroResp,NPP'.split(','):
+  #     slice_tuple = (slice(None),cmt,outvar,slice(None),slice(None))
+  #     make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
+
+  # heatmap-compare-cmts
+  # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
+  #   for outvar in 'VegC,LAI,SoilOrgC,HeteroResp,NPP'.split(','):
+  #     slice_tuple = (site,slice(None),outvar,slice(None),slice(None))
+  #     make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
 
   # Each site (all cmts, all pfts) and all variables
   # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
