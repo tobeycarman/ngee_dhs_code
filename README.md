@@ -17,6 +17,9 @@ Overall workflow is like so:
  - this does not use qsub - all work is done on head!!
 3. Convert Rdata to csv files using rdata2csv.sh
 4. rsync to local
+ - change into ~/Documents/SEL/NGEE_Dec_2018_followup
+ - rename (move) the ngee_dhs_runs directory to archive
+    `$ rsync -avz --exclude "*/out/*" --exclude "*/run/*" --exclude="*/yearly_runs/*" modex.bnl.gov:/data/tcarman/ngee_dhs_runs .`
 5. run plotting with ppp.py
 
 
