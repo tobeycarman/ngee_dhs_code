@@ -113,7 +113,7 @@ done
 
 
 # For renaming files into flat directory with site and CMT in filename.
-cd "/Users/tobeycarman/Documents/SEL/NGEE_Dec_2018_followup/ngee_dhs_runs"
+cd "/Users/tobeycarman/Documents/SEL/ngee_dhs_code/ngee_dhs_runs"
 mkdir ~/Downloads/testbed
 for f in $(find . -wholename "*/plots/*");
 do
