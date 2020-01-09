@@ -445,6 +445,10 @@ def string_from_slicetuple(st):
       s += '{}({}-{})_'.format(lo, f(i.start), f(i.stop))
     elif type(i) == str:
       s += '{}({})_'.format(lo,i)
+    elif type(i) == tuple or type(i) == list:
+      s += '{}('.format(lo)
+      s += ','.join(i)
+      s += ')'
     else:
       raise RuntimeError("Invalid type in string_from_slicetuple")
   return s
