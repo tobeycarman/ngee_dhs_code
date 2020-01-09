@@ -453,6 +453,30 @@ def string_from_slicetuple(st):
       raise RuntimeError("Invalid type in string_from_slicetuple")
   return s
 
+def make_boxplot_2(run_suite_directory, slice_tuple, exclude=[]):
+
+  print "Looking here for a set of pecan:dvmdostem runs: {}".format(run_suite_directory)
+  print "Will exclude these directories if they exist: {}".format(exclude)
+  print os.listdir(run_suite_directory)
+  print ''
+
+
+  run_directories = filter(lambda x: os.path.isdir(os.path.join(os.path.abspath(run_suite_directory), x)), os.listdir(run_suite_directory))
+  print run_directories
+  print ''
+
+  run_directories = filter(lambda y: y not in exclude, run_directories)
+  print run_directories
+  print ''
+
+  runs = map(lambda x: os.path.join(os.path.abspath(run_suite_directory), x), run_directories)
+  print runs
+  print''
+
+  df = load_all_sensan(runs)
+
+  #plt.boxplot(df.loc[(slice(None),slice(None),slice(None),slice(None),slice(None)), 'partial.variances'].unstack(level=4).transpose(), vert=False)
+
 
 def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclude=[], show_param_uncertainty=False):
   '''
