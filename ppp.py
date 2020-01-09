@@ -921,6 +921,15 @@ def make_timeseries_figure(run_output_dir):
   wrtite_file(run_output_dir, "timeseries.pdf")
 
 
+def make_scatter_plot(run_output_dir):
+  var_list, syr, eyr = find_available_vars_years(run_output_dir)
+
+  pfts, data_frames = load_sensitivity_analysis(run_output_dir, v, sy, ey)
+
+  import seaborn as sans
+  sns.lmplot('coef.vars', 'partial.variances', data=data_frames[0], fit_reg=False)
+
+  from IPython import embed; embed()
 
 def modex_smart_find_drivers(run_output_dir):
   from lxml import etree
