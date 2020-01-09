@@ -1,0 +1,6 @@
+
+# These two paths contain runs on T.Carman's local machine
+# generally the data has been rsync'd with the original directories
+# on modex. But we don't want to use git to track any of it.
+05-16-2019_ngee_dhs_runs/*
+ngee_dhs_runs/*
