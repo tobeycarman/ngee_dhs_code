@@ -176,7 +176,7 @@ def find_available_vars_years(run_output_dir):
   syr = syrs.pop()
   eyr = eyrs.pop()
 
-  custom_order=['NPP','LAI','VegC','HeteroResp','SoilOrgC']
+  custom_order=['GPP','NPP','LAI','VegC','HeteroResp','AutoResp','SoilOrgC','AvailN','NUptakeLab','NUptakeSt','OrgN','VegN']
 
   var_list = sorted(var_list, key=lambda x: custom_order.index(x))
   return var_list, syr, eyr
