@@ -903,6 +903,9 @@ def make_timeseries_figure(run_output_dir):
     ax.set_title(var)
     ax.set_ylabel(config_dict[var]['to_units'])
 
+    d = pd.DataFrame(data={'ens_median':df.median(1),'ens_q025':df.quantile(0.025, 1), 'ens_q975':df.quantile(0.975,1)})
+    d.to_csv(os.path.join(run_output_dir, "plots", "{}_ts_summary_data.csv".format(var)))
+
   for i, ax in enumerate(axes):
     if i == len(axes)-1:
       ax.set_xlabel("Time")
