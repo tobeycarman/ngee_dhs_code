@@ -27,20 +27,49 @@ config_dict = {
     'to_units': 'g C m-2 month-1',
   },
   'HeteroResp': {
-    'from_units': 'kg C m-2 s-1',
-    'to_units': 'g C m-2 month-1',
+    'from_units': 'kg m-2 s-1',
+    'to_units': 'g m-2 month-1',
   },
   'LAI': {
     'from_units': 'm2/m2',
     'to_units': 'm2/m2',
   },
   'SoilOrgC': {
-    'from_units': 'kg C m-2',
-    'to_units': 'g C m-2',
+    'from_units': 'kg m-2',
+    'to_units': 'g m-2',
   },
   'VegC': {
-    'from_units': 'kg C m-2',
-    'to_units': 'g C m-2',
+    'from_units': 'kg m-2',
+    'to_units': 'g m-2',
+  },
+
+  'AvailN': {
+    'from_units': 'kg m-2',
+    'to_units': 'g m-2',
+  },
+  'GPP': {
+    'from_units': 'kg m-2 s-1',
+    'to_units': 'g m-2 month-1',
+  },
+  'NUptakeLab': {
+    'from_units': 'kg m-2 s-1',
+    'to_units': 'g m-2 month-1',
+  },
+  'NUptakeSt': {
+    'from_units': 'kg m-2 s-1',
+    'to_units': 'g m-2 month-1',
+  },
+  'OrgN': {
+    'from_units': 'kg m-2',
+    'to_units': 'g m-2',
+  },
+  'AutoResp': {
+    'from_units': 'kg m-2 s-1',
+    'to_units': 'g m-2 month-1',
+  },
+  'VegN': {
+    'from_units': 'kg m-2',
+    'to_units': 'g m-2',
   },
 }
 
