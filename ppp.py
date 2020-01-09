@@ -928,19 +928,45 @@ def modex_smart_find_drivers(run_output_dir):
   p = os.path.dirname( tree.findall('run/inputs/met/path/path1')[0].text )
   return p
 
+def lituya_smart_find_drivers(run_output_dir):
+  from lxml import etree
+  tree = etree.parse( os.path.join(run_output_dir, 'pecan.METProcess.xml') ) 
+  p = os.path.dirname( tree.findall('run/inputs/met/path/path1')[0].text )
+
+  # Assumes this: 
+  #In [46]: os.path.abspath(os.path.curdir)
+  #Out[46]: '/Users/tobeycarman/Documents/SEL/ngee_dhs_code'
+
+  local_catalog = os.path.abspath("../dvmdostem-input-catalog/")
+
+  z = local_catalog[0:local_catalog.find('dvmdostem-input-catalog')] + p[p.find('dvmdostem-input-catalog'):]
+
+  print "Using this path for driving inputs:  {}".format(z)
+
+  return z
+
+
 
 def do_it_all(directory):
 
+  # testing...
+  #make_scatter_plot(directory)
+
   make_timeseries_figure(directory)
+
+
   make_box_plot_figure(directory)
   make_vardecomp_figure(directory)
 
   hostname = socket.gethostname()
   if 'modex' in hostname:
     driving_path = modex_smart_find_drivers(directory)
+  elif 'lituya' in hostname:
+    driving_path = lituya_smart_find_drivers(directory)
   else:
-    print "You might be shit out of luck!"
-    driving_path = "../dvmdostem-input-catalog/cru-ts40_ar5_rcp85_mri-cgcm3_dh_site_1_1x1/"
+    raise RuntimeError("You are screwed. Not sure where to find drivers. Try running on modex or T.Carman's laptop.")
+    #driving_path = "../dvmdostem-input-catalog/cru-ts40_ar5_rcp85_mri-cgcm3_dh_site_1_10x10/"   # May 2019
+    #driving_path = "../dvmdostem-input-catalog/cru-ts40_ar5_rcp85_ncar-ccsm4_dhs_site_1_10x10/" # Nov 2019, dvm-dos-tem-v0.2.x and up
 
   make_frs_figure(directory, 'LAI', 'drivers', driving_data_path=driving_path)
   make_frs_figure(directory, 'HeteroResp', 'drivers', driving_data_path=driving_path)
