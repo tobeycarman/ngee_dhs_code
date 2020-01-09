@@ -540,18 +540,34 @@ def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclud
   pv = df.loc[slice_tuple, 'partial.variances'].sort_index(level='pft')
   pv_ = pv.unstack(level=(0,1,2,3))
 
-  reduced_param_slice_list = ['SLA','SW_albedo','extinction_coefficient_diffuse','gcmax','klai','labncon']
-  short_name_list = ['sla','sw_albedo','ex_coef_diff','gcmax','klai','labcon']
+
+  # This is the full list of available params (long names)
+  # 
+  # SLA, SW_albedo, cuticular_cond, extinction_coefficient_diffuse, 
+  # frprod_perc_10, frprod_perc_20, frprod_perc_30, frprod_perc_40, 
+  # frprod_perc_50, gcmax, ilai, klai, labncon, ppfd50, pstemp_high,
+  # pstemp_low, pstemp_max, pstemp_min, vpd_close, vpd_open
+
+
+  reduced_param_slice_list = 'SLA SW_albedo extinction_coefficient_diffuse frprod_perc_10 gcmax klai vpd_open'.split(' ')
+  short_name_list = ['sla','sw_alb','excoef','fprod10','gcmax','klai','vpdopen']
+
+  # This is the short list we used May 2019
+  #reduced_param_slice_list = ['SLA','SW_albedo','extinction_coefficient_diffuse','gcmax','klai','labncon']
+  #short_name_list = ['sla','sw_albedo','ex_coef_diff','gcmax','klai','labcon']
+
+  # Make the map from short to long names
   short_name_dict = {}
   for ln, sn in zip(reduced_param_slice_list, short_name_list):
     short_name_dict[ln] = sn
 
-  short_name_list = 'sla,sw_alb,cut_cond,ex_coef_dif,fprod10,fprod20,fprod30,fprod40,fprod50,gcmax,ilai,klai,labncon,ppfd50,ptmp_h,ptmp_l,ptmp_mx,ptmp_mn,vpd_close,vpd_open'.split(',')
-  short_name_dict = {}
-  for ln, sn in zip(el_.index, short_name_list):
-    short_name_dict[ln] = sn
+  # Short names for everything
+  #short_name_list = 'sla,sw_alb,cut_cond,ex_coef_dif,fprod10,fprod20,fprod30,fprod40,fprod50,gcmax,ilai,klai,labncon,ppfd50,ptmp_h,ptmp_l,ptmp_mx,ptmp_mn,vpd_close,vpd_open'.split(',')
+  #short_name_dict = {}
+  #for ln, sn in zip(el_.index, short_name_list):
+  #  short_name_dict[ln] = sn
 
-  reduced_param_slice_list = el_.index
+  #reduced_param_slice_list = el_.index
 
   print "[[[[[[[[[[[[]]]]]]]]]]]]]]]"
   print ""
@@ -559,9 +575,10 @@ def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclud
   print ""
   print "[[[[[[[[[[[[]]]]]]]]]]]]]]]"
   #from IPython import embed; embed()
+  print short_name_dict
 
-  # if len(reduced_param_slice_list) != len(short_name_list):
-  #   rasie RuntimeError("Something is wrong with the reduced name and parameter list!")
+  if len(reduced_param_slice_list) != len(short_name_list):
+    raise RuntimeError("Something is wrong with the reduced name and parameter list!")
 
   def colorbar(mappable):
     '''Makes the colorbar the same size as the axes.
@@ -614,7 +631,7 @@ def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclud
   # y axis, major ticks
   for ax in [ax1]:
     ax.set_yticks(np.arange(0, len(reduced_param_slice_list)))
-    ax.set_yticklabels([short_name_dict[i] for i in cv_.index], fontsize=8)
+    ax.set_yticklabels([short_name_dict[i] for i in cv_.loc[reduced_param_slice_list].index], fontsize=8)
   
   for ax in (ax1,ax2):
     ax.set_yticks(np.arange(0, len(reduced_param_slice_list)))
@@ -723,7 +740,7 @@ def make_heatmap_variance_decomposition(run_suite_directory, slice_tuple, exclud
 
   # Needed to keep labels from overflowing figure bounds...
   #plt.tight_layout()
-
+  print "SLICE TUPLE:", slice_tuple
   fname_addition = string_from_slicetuple(slice_tuple)
   wrtite_file(run_suite_directory, "vd_heatmap_{}.pdf".format(fname_addition))
   
@@ -860,6 +877,18 @@ def make_timeseries_figure(run_output_dir):
   data_frames = [load_ensemble_ts(run_output_dir, v, syr, eyr) for v in var_list]
   data_frames = [df_convert_index(df) for df in data_frames]
 
+  '''
+  Each data frame is something like this:
+
+      In [6]: a.shape
+      Out[6]: (312, 300) # <--(timesteps, number of ensembles) 
+
+      In [7]: a.head()
+      Out[7]: 
+                         0           1           2     ....         300   
+      1990-01-01   -0.173159   -0.179232   -0.173165   ....   -0.172791   
+      1990-02-01   -0.077322   -0.079780   -0.077687   ....   -0.077280 
+  '''
   if len(data_frames) != len(var_list):
     raise RuntimeError("Hmmm, variable list is not equal to the number of loaded pandas DataFrames!")
 
