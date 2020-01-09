@@ -1010,7 +1010,10 @@ def do_it_all(directory):
 
 def do_vardecomp_heatmaps(directory):
 
-  # slice_tuple = (slice(None), slice(None), slice(None), slice(None), slice(None))
+  # [u'site',     u'cmt',        u'output_variable',      u'pft',        u'param'])
+
+
+  #slice_tuple = (slice(None), slice(None), slice(None), slice(None), slice(None))
   # make_boxplot_2(directory, slice_tuple, exclude=['yearly_runs','plots'])
   # sys.exit()
 
@@ -1023,12 +1026,67 @@ def do_vardecomp_heatmaps(directory):
   #make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
 
   # left panel
-  slice_tuple = (slice(None), 'cmt06', 'NPP', slice(None), slice(None))
-  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
+  #slice_tuple = (slice(None), 'cmt06', 'NPP', slice(None), slice(None))
+  #make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
 
   # right panel
-  slice_tuple = (slice(None), 'cmt04', 'NPP', slice(None), slice(None))
-  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
+  # slice_tuple = (slice(None), 'cmt04', 'NPP', slice(None), slice(None))
+  # make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
+
+
+  #make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+
+  #slice_tuple = ('dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak'.split(','), slice(None),'NPP',slice(None),slice(None))
+  slice_tuple = ('dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak'.split(','), 'cmt04','NPP,VegC,SoilOrgC'.split(','),slice(None),slice(None))
+  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+  slice_tuple = ('dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak'.split(','), 'cmt04','NPP'.split(','),slice(None),slice(None))
+  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+  slice_tuple = ('dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak'.split(','), 'cmt04','VegC'.split(','),slice(None),slice(None))
+  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+  slice_tuple = ('dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak'.split(','), 'cmt04','SoilOrgC'.split(','),slice(None),slice(None))
+  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+
+  #slice_tuple = ('dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak'.split(','), slice(None),'NPP',slice(None),slice(None))
+  slice_tuple = ('dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak'.split(','), 'cmt04','NPP,VegC,SoilOrgC'.split(','),'Betula,Decid'.split(','),slice(None))
+  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+  slice_tuple = ('dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak'.split(','), 'cmt04','NPP'.split(','),'Betula,Decid'.split(','),slice(None))
+  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+  slice_tuple = ('dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak'.split(','), 'cmt04','VegC'.split(','),'Betula,Decid'.split(','),slice(None))
+  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+  slice_tuple = ('dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak'.split(','), 'cmt04','SoilOrgC'.split(','),'Betula,Decid'.split(','),slice(None))
+  make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+
+
+
+
+
+
+
+
+  # The basics....11/22
+  # slice_tuple = ('dhs_1,dhs_2,dhs_3,dhs_4,dhs_5'.split(','), slice(None),'NPP',slice(None),slice(None))
+  # make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+
+  # slice_tuple = ('kougorak', slice(None), ('VegC','SoilOrgC'), slice(None), slice(None))
+  # make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+
+  # slice_tuple = ('utqiagvik', slice(None), slice(None), slice(None), slice(None))
+  # make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+  # END the basics...11/22
+
+
+  # 11-22, like EE slide 1
+  # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5'.split(','):
+  #   slice_tuple = ( site, 'cmt04', 'NPP', slice(None), slice(None)) 
+  #   make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+
+  # 11-22 like EE slide 2
+  #slice_tuple = ('kougorak',slice(None),'VegC', slice(None), slice(None))
+  #make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
+
+  # 11-22 like EE slide 3
+  #slice_tuple = ('utqiagvik', slice(None), ('NPP','SoilOrgC'), slice(None), slice(None))
+  #make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])  
 
 
   # heatmap-compare-sites
@@ -1038,13 +1096,13 @@ def do_vardecomp_heatmaps(directory):
   #     make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
 
   # heatmap-compare-cmts
-  # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
+  # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,utqiagvik'.split(','):
   #   for outvar in 'VegC,LAI,SoilOrgC,HeteroResp,NPP'.split(','):
   #     slice_tuple = (site,slice(None),outvar,slice(None),slice(None))
   #     make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
 
   # Each site (all cmts, all pfts) and all variables
-  # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,southbarrow'.split(','):
+  # for site in 'dhs_1,dhs_2,dhs_3,dhs_4,dhs_5,kougorak,utqiagvik'.split(','):
   #   slice_tuple = (site, slice(None), slice(None), slice(None), slice(None))
   #   make_heatmap_variance_decomposition(directory, slice_tuple, exclude=['yearly_runs', 'plots'])
 
