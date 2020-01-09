@@ -128,6 +128,7 @@ def find_available_vars_years(run_output_dir):
   var_list = []
   syrs = []
   eyrs = []
+  print files
   for f in files:
     # each f is somethign like this:
     # ensemble.ts.2000001299.NPP.1990.2015.Rdata.csv
@@ -983,12 +984,17 @@ if __name__ == '__main__':
   parser.add_argument('--run-directory', nargs=1,
       #type=argparse.FileType('r'),
       metavar=('DIRECTORY'), 
-      help=textwrap.dedent('''Path to directory with PEcAn run in it.'''))
+      help=textwrap.dedent('''Path to directory with PEcAn run in it. This is not
+        an individual model run, but rather a bunch of model runs that make a pecan
+        run. I.e. a directory with a pecan.xml in it.'''))
 
   parser.add_argument('--run-suite-directory', nargs=1,
       #type=argparse.FileType('r'),
       metavar=('DIRECTORY'), 
-      help=textwrap.dedent('''Path to directory with a bunch of PEcAn runs in it.'''))
+      help=textwrap.dedent('''Path to directory with a bunch of PEcAn runs in it. This
+        means a directory with a bunch of subdirectories, each of which has a pecan.xml
+        file. So this is a "suite" of pecan runs that can then be compared using the
+        heatmaps.'''))
 
   args = parser.parse_args()
 
