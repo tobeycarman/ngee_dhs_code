@@ -108,6 +108,31 @@ if __name__ == '__main__':
   get_element(tree, 'model/dvmdostem_pecan_outputs').text = "AvailN,GPP,LAI,NPP,NUptakeLab,NUptakeSt,OrgN,HeteroResp,AutoResp,SoilOrgC,VegC,VegN"
   print "Adding new output variable specification tag..."
 
+  print "Set model binary and type..."
+  if len(tree.findall('model/type')) == 0:
+    for e in tree.findall('model'):
+      e.append(etree.Element('type'))
+      print "Added model/type tag..."
+  if len(tree.findall('model/binary')) == 0:
+    for e in tree.findall('model'):
+      e.append(etree.Element('binary'))
+      print "Added model/binary tag..."
+    
+  get_element(tree, 'model/binary').text = "/home/tcarman/dvm-dos-tem/dvmdostem"
+  get_element(tree, 'model/type').text = "dvmdostem"
+
+  print "Set model run years, various options, prerun environmental setup and module loading..."
+  get_element(tree, 'model/dvmdostem_prerun').text = '100'
+  get_element(tree, 'model/dvmdostem_equil').text = '1000'
+  get_element(tree, 'model/dvmdostem_spinup').text = '250'
+  get_element(tree, 'model/dvmdostem_transient').text = '115'
+  get_element(tree, 'model/dvmdostem_scenerio').text = '10'
+  get_element(tree, 'model/dvmdostem_loglevel').text = 'fatal'
+  get_element(tree, 'model/dvmdostem_forcecmtnum').text = 'yes'
+  get_element(tree, 'model/dvmdostem_dynamic_modeled_lai').text = '1'
+  get_element(tree, 'model/prerun').text = 'module purge; module load python/2.7.14 gcc/5.4.0 boost/1.67.0 netcdf/4.3.3.1 jsoncpp/jsoncpp-1.8.4; module list; export LD_LIBRARY_PATH="/data/software/src/openblas/OpenBLAS-0.3.7/:$LD_LIBRARY_PATH"'
+
+
   if len(tree.findall('database/dbfiles')) == 0:
     for e in tree.findall('database'):
       e.append(etree.Element('dbfiles'))
@@ -138,7 +163,7 @@ if __name__ == '__main__':
   else:
     print etree.tostring(tree, pretty_print=True, xml_declaration=True,   encoding="utf-8")
     print ""
-    print "Something is eff'd up wiht the xml..."
+    print "Something is eff'd up with the xml..."
 
 
 
