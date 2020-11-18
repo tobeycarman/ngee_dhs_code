@@ -25,4 +25,6 @@ Overall workflow is like so:
     `$ rsync -avz --exclude "*/out/*" --exclude "*/run/*" --exclude="*/yearly_runs/*" modex.bnl.gov:/data/tcarman/ngee_dhs_runs .`
 6. run plotting with ppp.py
 
+Cite this code:
+[![DOI](https://zenodo.org/badge/175490578.svg)](https://zenodo.org/badge/latestdoi/175490578)
 
