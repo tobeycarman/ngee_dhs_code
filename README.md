@@ -26,5 +26,6 @@ Overall workflow is like so:
 6. run plotting with ppp.py
 
 Cite this code:
+
 [![DOI](https://zenodo.org/badge/175490578.svg)](https://zenodo.org/badge/latestdoi/175490578)
 
