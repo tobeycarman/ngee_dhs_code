@@ -1,7 +1,12 @@
 #!/bin/bash
 
 # T. Carman
-# create posteriors table
+
+# Collate a posteriors table or priors table.
+# This code works the same for priors if you substitute 
+# "prior.distns.Rdata" for "post.disnts.MA.Rdata"
+#
+#
 # The posterior distribution data exists in .Rdata files in 
 # the run folders like this:
 #     $ ngee_dhs_runs/dhs_1_cmt04/pft/CMT04-Betula/post.distns.MA.Rdata
