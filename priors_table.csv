@@ -1,20 +1,3 @@
-# Priors summary table. Generated 12/10/2020 using scripts
-# that collate data from the run directories, and then 
-# adjusted using scripts that add the confidence interval, 
-# median, and units columns.
-#
-# Column descriptions:
-# pftname = name of the community type (4 = shrub tundra, 5= tussock tundra, 6 = wet sedge tundra , 7 = heath tundra)
-# vname = variable name
-# units = the units of measurement
-# distname = statistical distribution assigend to the parameter range of values, using R distributions
-# parama = first parameter of the distribution
-# paramb = second parameter of the distribution
-# n = the number of samples in the Bety DB for the parameter 
-# cimin = lower confidence interval
-# cimax = upper confidence interval
-# median = median value of the parameter
-#
 "pft","vname","units","distname","parama","paramb","n","cimin","cimax","median"
 "CMT04-Feather","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
 "CMT04-Feather","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
