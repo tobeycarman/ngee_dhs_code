@@ -19,7 +19,6 @@ The scripts are as follows:
 * distname = statistical distribution assigend to the parameter range of values, using R distributions
 * parama = first parameter of the distribution
 * paramb = second parameter of the distribution
-* n = the number of samples in the Bety DB for the parameter/variable 
 * cimin = lower confidence interval
 * cimax = upper confidence interval
 * median = median value of the parameter

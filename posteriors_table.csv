@@ -1,681 +1,681 @@
-"pft","vname","units","distname","parama","paramb","n","cimin","cimax","median"
-"CMT04-Salix","Extinction coefficient","unitless","weibull",4,0.4,NA,0.0711400720617792,0.554854357511702,0.365298460704564
-"CMT04-Salix","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Salix","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Salix","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Salix","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Salix","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Salix","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Salix","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Salix","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Salix","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Salix","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Salix","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Salix","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Salix","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Salix","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",1.5,9.5,0,1.508,9.30019219219219,5.503995995996
-"CMT04-Salix","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",19,28,0,19.009,27.7752162162162,23.5044954954955
-"CMT04-Salix","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",20,30,0,20.01,29.7502402402402,25.004994994995
-"CMT04-Salix","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Salix","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Salix","SLA; specific leaf area","m2 kg leaf-1","norm",10.9285247402424,0.208694157449098,347,10.2836113127847,11.3384546966344,10.9291702992288
-"CMT04-Decid","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Decid","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Decid","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Decid","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Decid","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Decid","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Decid","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Decid","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Decid","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Decid","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Decid","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Decid","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Decid","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Decid","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Decid","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Decid","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Decid","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Decid","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Decid","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Decid","SLA; specific leaf area","m2 kg leaf-1","norm",8.53142145701822,0.422886838004098,347,7.2246028883648,9.36208190856469,8.53272958371357
-"CMT04-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
-"CMT05-EGreen","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-EGreen","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT05-EGreen","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-EGreen","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-EGreen","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-EGreen","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT05-EGreen","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT05-EGreen","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-EGreen","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT05-EGreen","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-EGreen","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT05-EGreen","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT05-EGreen","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-EGreen","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-EGreen","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT05-EGreen","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-EGreen","ilai; Starting value for leaf area index","m2 m-2","norm",2,0.25,NA,1.22744192345805,2.49106544404819,2.00077333140795
-"CMT05-EGreen","SLA; specific leaf area","m2 kg leaf-1","norm",7.52506776639011,1.00559671847031,347,4.41754029999682,9.50032296274621,7.52817840449461
-"CMT05-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.3,0.6,0,0.3003,0.592507207207207,0.45014984984985
-"CMT05-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",5,25,0,5.02,24.5004804804805,15.00998998999
-"CMT05-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",17,42,0,17.025,41.3756006006006,29.5124874874875
-"CMT05-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",35,56,0,35.021,55.4755045045045,45.5104894894895
-"CMT05-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",4,14,0,4.01,13.7502402402402,9.00499499499499
-"CMT05-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-10,0,0,-9.99,-0.24975975975976,-4.99500500500501
-"CMT05-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",15,25,0,15.01,24.7502402402402,20.004994994995
-"CMT05-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",25,45,0,25.02,44.5004804804805,35.00998998999
-"CMT05-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT05-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
-"CMT06-Grasses","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT06-Grasses","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT06-Grasses","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT06-Grasses","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT06-Grasses","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT06-Grasses","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT06-Grasses","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT06-Grasses","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT06-Grasses","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT06-Grasses","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT06-Grasses","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT06-Grasses","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT06-Grasses","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT06-Grasses","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-7.5,-2.5,0,-7.495,-2.62487987987988,-4.9975025025025
-"CMT06-Grasses","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",10,30,0,10.02,29.5004804804805,20.00998998999
-"CMT06-Grasses","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",25,45,0,25.02,44.5004804804805,35.00998998999
-"CMT06-Grasses","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT06-Grasses","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT06-Grasses","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","gamma",1,6,0,0.000166750055597256,0.61548324184711,0.116546835581707
-"CMT06-Grasses","SLA; specific leaf area","m2 kg leaf-1","norm",18.2684191778594,0.6066279658783,347,16.3937978398774,19.4599953036037,18.2702956756952
-"CMT06-Sedges","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT06-Sedges","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT06-Sedges","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.01,0.65,NA,0.01064,0.634015375375375,0.33031967967968
-"CMT06-Sedges","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT06-Sedges","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT06-Sedges","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT06-Sedges","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT06-Sedges","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT06-Sedges","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT06-Sedges","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT06-Sedges","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT06-Sedges","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT06-Sedges","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT06-Sedges","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT06-Sedges","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-7.5,-2.5,0,-7.495,-2.62487987987988,-4.9975025025025
-"CMT06-Sedges","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",10,30,0,10.02,29.5004804804805,20.00998998999
-"CMT06-Sedges","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",25,45,0,25.02,44.5004804804805,35.00998998999
-"CMT06-Sedges","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT06-Sedges","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT06-Sedges","SLA; specific leaf area","m2 kg leaf-1","norm",18.9613617481874,0.626381606143654,347,17.025697072893,20.1917391944456,18.963299350465
-"CMT04-Salix","Extinction coefficient","unitless","weibull",4,0.4,NA,0.0711400720617792,0.554854357511702,0.365298460704564
-"CMT04-Salix","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Salix","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Salix","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Salix","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Salix","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Salix","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Salix","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Salix","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Salix","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Salix","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Salix","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Salix","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Salix","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Salix","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",1.5,9.5,0,1.508,9.30019219219219,5.503995995996
-"CMT04-Salix","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",19,28,0,19.009,27.7752162162162,23.5044954954955
-"CMT04-Salix","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",20,30,0,20.01,29.7502402402402,25.004994994995
-"CMT04-Salix","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Salix","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Salix","SLA; specific leaf area","m2 kg leaf-1","norm",10.9285247402424,0.208694157449098,347,10.2836113127847,11.3384546966344,10.9291702992288
-"CMT04-Decid","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Decid","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Decid","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Decid","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Decid","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Decid","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Decid","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Decid","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Decid","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Decid","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Decid","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Decid","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Decid","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Decid","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Decid","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Decid","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Decid","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Decid","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Decid","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Decid","SLA; specific leaf area","m2 kg leaf-1","norm",8.53142145701822,0.422886838004098,347,7.2246028883648,9.36208190856469,8.53272958371357
-"CMT04-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
-"CMT05-EGreen","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-EGreen","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT05-EGreen","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-EGreen","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-EGreen","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-EGreen","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT05-EGreen","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT05-EGreen","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-EGreen","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT05-EGreen","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-EGreen","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT05-EGreen","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT05-EGreen","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-EGreen","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-EGreen","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT05-EGreen","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-EGreen","ilai; Starting value for leaf area index","m2 m-2","norm",2,0.25,NA,1.22744192345805,2.49106544404819,2.00077333140795
-"CMT05-EGreen","SLA; specific leaf area","m2 kg leaf-1","norm",7.52506776639011,1.00559671847031,347,4.41754029999682,9.50032296274621,7.52817840449461
-"CMT05-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.3,0.6,0,0.3003,0.592507207207207,0.45014984984985
-"CMT05-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",5,25,0,5.02,24.5004804804805,15.00998998999
-"CMT05-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",17,42,0,17.025,41.3756006006006,29.5124874874875
-"CMT05-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",35,56,0,35.021,55.4755045045045,45.5104894894895
-"CMT05-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",4,14,0,4.01,13.7502402402402,9.00499499499499
-"CMT05-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-10,0,0,-9.99,-0.24975975975976,-4.99500500500501
-"CMT05-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",15,25,0,15.01,24.7502402402402,20.004994994995
-"CMT05-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",25,45,0,25.02,44.5004804804805,35.00998998999
-"CMT05-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT05-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
-"CMT05-EGreen","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-EGreen","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT05-EGreen","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-EGreen","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-EGreen","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-EGreen","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT05-EGreen","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT05-EGreen","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-EGreen","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT05-EGreen","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-EGreen","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT05-EGreen","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT05-EGreen","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-EGreen","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-EGreen","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT05-EGreen","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-EGreen","ilai; Starting value for leaf area index","m2 m-2","norm",2,0.25,NA,1.22744192345805,2.49106544404819,2.00077333140795
-"CMT05-EGreen","SLA; specific leaf area","m2 kg leaf-1","norm",7.52506776639011,1.00559671847031,347,4.41754029999682,9.50032296274621,7.52817840449461
-"CMT05-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.3,0.6,0,0.3003,0.592507207207207,0.45014984984985
-"CMT05-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",5,25,0,5.02,24.5004804804805,15.00998998999
-"CMT05-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",17,42,0,17.025,41.3756006006006,29.5124874874875
-"CMT05-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",35,56,0,35.021,55.4755045045045,45.5104894894895
-"CMT05-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",4,14,0,4.01,13.7502402402402,9.00499499499499
-"CMT05-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-10,0,0,-9.99,-0.24975975975976,-4.99500500500501
-"CMT05-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",15,25,0,15.01,24.7502402402402,20.004994994995
-"CMT05-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",25,45,0,25.02,44.5004804804805,35.00998998999
-"CMT05-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT05-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
-"CMT04-Salix","Extinction coefficient","unitless","weibull",4,0.4,NA,0.0711400720617792,0.554854357511702,0.365298460704564
-"CMT04-Salix","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Salix","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Salix","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Salix","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Salix","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Salix","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Salix","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Salix","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Salix","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Salix","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Salix","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Salix","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Salix","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Salix","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",1.5,9.5,0,1.508,9.30019219219219,5.503995995996
-"CMT04-Salix","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",19,28,0,19.009,27.7752162162162,23.5044954954955
-"CMT04-Salix","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",20,30,0,20.01,29.7502402402402,25.004994994995
-"CMT04-Salix","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Salix","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Salix","SLA; specific leaf area","m2 kg leaf-1","norm",10.9285247402424,0.208694157449098,347,10.2836113127847,11.3384546966344,10.9291702992288
-"CMT04-Decid","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Decid","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Decid","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Decid","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Decid","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Decid","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Decid","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Decid","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Decid","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Decid","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Decid","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Decid","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Decid","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Decid","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Decid","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Decid","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Decid","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Decid","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Decid","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Decid","SLA; specific leaf area","m2 kg leaf-1","norm",8.53142145701822,0.422886838004098,347,7.2246028883648,9.36208190856469,8.53272958371357
-"CMT04-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
-"CMT04-Salix","Extinction coefficient","unitless","weibull",4,0.4,NA,0.0711400720617792,0.554854357511702,0.365298460704564
-"CMT04-Salix","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Salix","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Salix","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Salix","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Salix","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Salix","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Salix","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Salix","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Salix","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Salix","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Salix","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Salix","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Salix","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Salix","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",1.5,9.5,0,1.508,9.30019219219219,5.503995995996
-"CMT04-Salix","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",19,28,0,19.009,27.7752162162162,23.5044954954955
-"CMT04-Salix","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",20,30,0,20.01,29.7502402402402,25.004994994995
-"CMT04-Salix","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Salix","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Salix","SLA; specific leaf area","m2 kg leaf-1","norm",10.9285247402424,0.208694157449098,347,10.2836113127847,11.3384546966344,10.9291702992288
-"CMT04-Decid","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Decid","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Decid","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Decid","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Decid","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Decid","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Decid","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Decid","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Decid","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Decid","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Decid","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Decid","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Decid","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Decid","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Decid","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Decid","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Decid","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Decid","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Decid","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Decid","SLA; specific leaf area","m2 kg leaf-1","norm",8.53142145701822,0.422886838004098,347,7.2246028883648,9.36208190856469,8.53272958371357
-"CMT04-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
-"CMT05-EGreen","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-EGreen","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT05-EGreen","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-EGreen","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-EGreen","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-EGreen","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT05-EGreen","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT05-EGreen","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-EGreen","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT05-EGreen","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-EGreen","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT05-EGreen","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT05-EGreen","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-EGreen","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-EGreen","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT05-EGreen","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-EGreen","ilai; Starting value for leaf area index","m2 m-2","norm",2,0.25,NA,1.22744192345805,2.49106544404819,2.00077333140795
-"CMT05-EGreen","SLA; specific leaf area","m2 kg leaf-1","norm",7.52506776639011,1.00559671847031,347,4.41754029999682,9.50032296274621,7.52817840449461
-"CMT05-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.3,0.6,0,0.3003,0.592507207207207,0.45014984984985
-"CMT05-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",5,25,0,5.02,24.5004804804805,15.00998998999
-"CMT05-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",17,42,0,17.025,41.3756006006006,29.5124874874875
-"CMT05-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",35,56,0,35.021,55.4755045045045,45.5104894894895
-"CMT05-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",4,14,0,4.01,13.7502402402402,9.00499499499499
-"CMT05-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-10,0,0,-9.99,-0.24975975975976,-4.99500500500501
-"CMT05-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",15,25,0,15.01,24.7502402402402,20.004994994995
-"CMT05-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",25,45,0,25.02,44.5004804804805,35.00998998999
-"CMT05-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT05-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
-"CMT05-EGreen","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-EGreen","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT05-EGreen","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-EGreen","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-EGreen","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-EGreen","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT05-EGreen","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT05-EGreen","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-EGreen","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT05-EGreen","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-EGreen","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT05-EGreen","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT05-EGreen","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-EGreen","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-EGreen","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT05-EGreen","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-EGreen","ilai; Starting value for leaf area index","m2 m-2","norm",2,0.25,NA,1.22744192345805,2.49106544404819,2.00077333140795
-"CMT05-EGreen","SLA; specific leaf area","m2 kg leaf-1","norm",7.52506776639011,1.00559671847031,347,4.41754029999682,9.50032296274621,7.52817840449461
-"CMT05-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.3,0.6,0,0.3003,0.592507207207207,0.45014984984985
-"CMT05-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",5,25,0,5.02,24.5004804804805,15.00998998999
-"CMT05-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",17,42,0,17.025,41.3756006006006,29.5124874874875
-"CMT05-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",35,56,0,35.021,55.4755045045045,45.5104894894895
-"CMT05-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",4,14,0,4.01,13.7502402402402,9.00499499499499
-"CMT05-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-10,0,0,-9.99,-0.24975975975976,-4.99500500500501
-"CMT05-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",15,25,0,15.01,24.7502402402402,20.004994994995
-"CMT05-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",25,45,0,25.02,44.5004804804805,35.00998998999
-"CMT05-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT05-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
-"CMT07-EGreen","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT07-EGreen","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT07-EGreen","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT07-EGreen","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT07-EGreen","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT07-EGreen","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT07-EGreen","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT07-EGreen","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT07-EGreen","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT07-EGreen","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT07-EGreen","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT07-EGreen","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT07-EGreen","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT07-EGreen","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT07-EGreen","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT07-EGreen","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT07-EGreen","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT07-EGreen","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT07-EGreen","ilai; Starting value for leaf area index","m2 m-2","norm",2,0.25,NA,1.22744192345805,2.49106544404819,2.00077333140795
-"CMT07-EGreen","SLA; specific leaf area","m2 kg leaf-1","norm",5.98291850072757,0.353662206147851,347,4.8900201258189,6.6776036539478,5.98401249309485
-"CMT07-Decid","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT07-Decid","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT07-Decid","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT07-Decid","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT07-Decid","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT07-Decid","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT07-Decid","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT07-Decid","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT07-Decid","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT07-Decid","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT07-Decid","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT07-Decid","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT07-Decid","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT07-Decid","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT07-Decid","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT07-Decid","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT07-Decid","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT07-Decid","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT07-Decid","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT07-Decid","SLA; specific leaf area","m2 kg leaf-1","gamma",60.532901796123,5.45709898503412,347,7.20247103235246,14.0640962104176,11.0350905011816
-"CMT04-Salix","Extinction coefficient","unitless","weibull",4,0.4,NA,0.0711400720617792,0.554854357511702,0.365298460704564
-"CMT04-Salix","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Salix","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Salix","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Salix","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Salix","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Salix","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Salix","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Salix","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Salix","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Salix","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Salix","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Salix","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Salix","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Salix","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",1.5,9.5,0,1.508,9.30019219219219,5.503995995996
-"CMT04-Salix","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",19,28,0,19.009,27.7752162162162,23.5044954954955
-"CMT04-Salix","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",20,30,0,20.01,29.7502402402402,25.004994994995
-"CMT04-Salix","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Salix","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Salix","SLA; specific leaf area","m2 kg leaf-1","norm",10.9285247402424,0.208694157449098,347,10.2836113127847,11.3384546966344,10.9291702992288
-"CMT04-Decid","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Decid","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Decid","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Decid","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Decid","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Decid","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Decid","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Decid","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Decid","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Decid","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Decid","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Decid","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Decid","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Decid","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Decid","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Decid","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Decid","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Decid","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Decid","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Decid","SLA; specific leaf area","m2 kg leaf-1","norm",8.53142145701822,0.422886838004098,347,7.2246028883648,9.36208190856469,8.53272958371357
-"CMT04-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
-"CMT05-EGreen","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-EGreen","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT05-EGreen","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT05-EGreen","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-EGreen","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-EGreen","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-EGreen","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT05-EGreen","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT05-EGreen","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-EGreen","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT05-EGreen","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-EGreen","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT05-EGreen","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT05-EGreen","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-EGreen","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-EGreen","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT05-EGreen","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-EGreen","ilai; Starting value for leaf area index","m2 m-2","norm",2,0.25,NA,1.22744192345805,2.49106544404819,2.00077333140795
-"CMT05-EGreen","SLA; specific leaf area","m2 kg leaf-1","norm",7.52506776639011,1.00559671847031,347,4.41754029999682,9.50032296274621,7.52817840449461
-"CMT05-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT05-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT05-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT05-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT05-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT05-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT05-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT05-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT05-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT05-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.3,0.6,0,0.3003,0.592507207207207,0.45014984984985
-"CMT05-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",5,25,0,5.02,24.5004804804805,15.00998998999
-"CMT05-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",17,42,0,17.025,41.3756006006006,29.5124874874875
-"CMT05-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",35,56,0,35.021,55.4755045045045,45.5104894894895
-"CMT05-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",4,14,0,4.01,13.7502402402402,9.00499499499499
-"CMT05-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-10,0,0,-9.99,-0.24975975975976,-4.99500500500501
-"CMT05-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",15,25,0,15.01,24.7502402402402,20.004994994995
-"CMT05-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",25,45,0,25.02,44.5004804804805,35.00998998999
-"CMT05-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT05-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT05-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
-"CMT04-Salix","Extinction coefficient","unitless","weibull",4,0.4,NA,0.0711400720617792,0.554854357511702,0.365298460704564
-"CMT04-Salix","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Salix","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Salix","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Salix","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Salix","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Salix","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Salix","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Salix","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Salix","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Salix","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Salix","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Salix","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Salix","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Salix","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",1.5,9.5,0,1.508,9.30019219219219,5.503995995996
-"CMT04-Salix","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",19,28,0,19.009,27.7752162162162,23.5044954954955
-"CMT04-Salix","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",20,30,0,20.01,29.7502402402402,25.004994994995
-"CMT04-Salix","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Salix","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Salix","SLA; specific leaf area","m2 kg leaf-1","norm",10.9285247402424,0.208694157449098,347,10.2836113127847,11.3384546966344,10.9291702992288
-"CMT04-Decid","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Decid","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Decid","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Decid","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Decid","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Decid","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Decid","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Decid","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Decid","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Decid","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Decid","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Decid","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Decid","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Decid","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Decid","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Decid","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Decid","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Decid","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Decid","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Decid","SLA; specific leaf area","m2 kg leaf-1","norm",8.53142145701822,0.422886838004098,347,7.2246028883648,9.36208190856469,8.53272958371357
-"CMT04-Betula","Extinction coefficient","unitless","gamma",5,10,NA,0.0739371731917833,1.02499118557003,0.46786487062656
-"CMT04-Betula","SW_albedo; Shortwave albedo","W m-2","unif",0.01,0.3,NA,0.01029,0.292756966966967,0.155144854854855
-"CMT04-Betula","Fine root productivity allocationn at 30 cm depth","percent","unif",1,30,NA,1.029,29.2756966966967,15.5144854854855
-"CMT04-Betula","Fine root productivity allocationn at 40 cm depth","percent","unif",0.5,10,NA,0.5095,9.76272822822823,5.25474524524525
-"CMT04-Betula","ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close","µmol m-2 s-1","unif",5,145,NA,5.14,141.503363363363,75.0699299299299
-"CMT04-Betula","vpd_open; Vapor pressure deficit for leaf stomata fully opened","Pa","unif",0.765,1.1,NA,0.765335,1.09163304804805,0.932667332332332
-"CMT04-Betula","vpd_close; Vapor pressure deficit for leaf stomata fully closed","Pa","unif",3.25,5,NA,3.25175,4.95629204204204,4.12587412412412
-"CMT04-Betula","Fine root productivity allocationn at 10 cm depth","percent","unif",1,60,NA,1.059,58.5264174174174,30.5294704704705
-"CMT04-Betula","Fine root productivity allocationn at 20 cm depth","percent","unif",10,90,NA,10.08,88.0019219219219,50.03995995996
-"CMT04-Betula","gcmax; Maximum canopy conductance","m s-1","unif",0.0025,0.0035,NA,0.002501,0.00347502402402402,0.0030004994994995
-"CMT04-Betula","pstemp_min; Minimum temperature for photosynthesis","degree_C","unif",-11,-5,NA,-10.994,-5.14985585585586,-7.997003003003
-"CMT04-Betula","pstemp_low; The range of minimal temperatures for photosynthesis","degree_C","unif",2,9,NA,2.007,8.82516816816817,5.5034964964965
-"CMT04-Betula","pstemp_high; The range of maximum temperatures for photosynthesis","degree_C","unif",20,26,NA,20.006,25.8501441441441,23.002996996997
-"CMT04-Betula","pstemp_max; Maximum temperature for photosynthesis","degree_C","unif",22,28,NA,22.006,27.8501441441441,25.002996996997
-"CMT04-Betula","Fine root productivity allocationn at 50 cm depth","percent","unif",0.005,4,NA,0.008995,3.90022097597598,2.0044955005005
-"CMT04-Betula","Cuticular conductance","µmol m-2 s-1","lnorm",8,0.7,0,342.693816651818,11766.1337124521,3006.45558607611
-"CMT04-Betula","klai; Extinction coefficient for converting between LAI and foliar percent cover","unitless","unif",0.15,0.34,0,0.15019,0.335254564564565,0.245094904904905
-"CMT04-Betula","labncon; Labile N concentration","g N m-2","unif",0.05,0.35,0,0.0503,0.342507207207207,0.20014984984985
-"CMT04-Betula","ilai; Starting value for leaf area index","m2 m-2","gamma",1,20,0,5.00250166791767e-05,0.184644972554133,0.0349640506745122
-"CMT04-Betula","SLA; specific leaf area","m2 kg leaf-1","norm",12.5370181678127,0.0960050284867679,347,12.2403403272283,12.7255971755916,12.5373151426281
+,pft,vname,units,distname,parama,paramb,cimin,cimax,median
+0,CMT04-Salix,Extinction coefficient,unitless,weibull,4.0,0.4,0.0711400720617792,0.554854357511702,0.36529846070456395
+1,CMT04-Salix,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+2,CMT04-Salix,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+3,CMT04-Salix,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+4,CMT04-Salix,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+5,CMT04-Salix,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+6,CMT04-Salix,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+7,CMT04-Salix,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+8,CMT04-Salix,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+9,CMT04-Salix,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+10,CMT04-Salix,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+11,CMT04-Salix,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+12,CMT04-Salix,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+13,CMT04-Salix,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+14,CMT04-Salix,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,1.5,9.5,1.508,9.30019219219219,5.503995995995999
+15,CMT04-Salix,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,19.0,28.0,19.009,27.775216216216197,23.5044954954955
+16,CMT04-Salix,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,20.0,30.0,20.01,29.750240240240196,25.004994994995
+17,CMT04-Salix,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+18,CMT04-Salix,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+19,CMT04-Salix,SLA; specific leaf area,m2 kg leaf-1,norm,10.9285247402424,0.208694157449098,10.2836113127847,11.3384546966344,10.929170299228801
+20,CMT04-Decid,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+21,CMT04-Decid,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+22,CMT04-Decid,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+23,CMT04-Decid,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+24,CMT04-Decid,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+25,CMT04-Decid,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+26,CMT04-Decid,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+27,CMT04-Decid,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+28,CMT04-Decid,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+29,CMT04-Decid,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+30,CMT04-Decid,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+31,CMT04-Decid,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+32,CMT04-Decid,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+33,CMT04-Decid,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+34,CMT04-Decid,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+35,CMT04-Decid,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+36,CMT04-Decid,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+37,CMT04-Decid,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+38,CMT04-Decid,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+39,CMT04-Decid,SLA; specific leaf area,m2 kg leaf-1,norm,8.531421457018219,0.42288683800409793,7.2246028883648,9.36208190856469,8.532729583713571
+40,CMT04-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+41,CMT04-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+42,CMT04-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+43,CMT04-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+44,CMT04-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+45,CMT04-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+46,CMT04-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+47,CMT04-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+48,CMT04-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+49,CMT04-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+50,CMT04-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+51,CMT04-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+52,CMT04-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+53,CMT04-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+54,CMT04-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+55,CMT04-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+56,CMT04-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+57,CMT04-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+58,CMT04-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+59,CMT04-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
+60,CMT05-EGreen,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+61,CMT05-EGreen,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+62,CMT05-EGreen,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+63,CMT05-EGreen,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+64,CMT05-EGreen,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+65,CMT05-EGreen,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+66,CMT05-EGreen,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+67,CMT05-EGreen,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+68,CMT05-EGreen,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+69,CMT05-EGreen,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+70,CMT05-EGreen,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+71,CMT05-EGreen,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+72,CMT05-EGreen,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+73,CMT05-EGreen,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+74,CMT05-EGreen,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+75,CMT05-EGreen,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+76,CMT05-EGreen,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+77,CMT05-EGreen,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+78,CMT05-EGreen,ilai; Starting value for leaf area index,m2 m-2,norm,2.0,0.25,1.22744192345805,2.4910654440481896,2.00077333140795
+79,CMT05-EGreen,SLA; specific leaf area,m2 kg leaf-1,norm,7.52506776639011,1.00559671847031,4.41754029999682,9.50032296274621,7.52817840449461
+80,CMT05-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+81,CMT05-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+82,CMT05-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+83,CMT05-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+84,CMT05-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+85,CMT05-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+86,CMT05-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+87,CMT05-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+88,CMT05-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+89,CMT05-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.3,0.6,0.3003,0.592507207207207,0.45014984984984996
+90,CMT05-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,5.0,25.0,5.02,24.500480480480498,15.009989989989998
+91,CMT05-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,17.0,42.0,17.025,41.3756006006006,29.5124874874875
+92,CMT05-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,35.0,56.0,35.021,55.4755045045045,45.5104894894895
+93,CMT05-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,4.0,14.0,4.01,13.750240240240199,9.004994994994991
+94,CMT05-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-10.0,0.0,-9.99,-0.24975975975976,-4.99500500500501
+95,CMT05-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,15.0,25.0,15.01,24.750240240240196,20.004994994995002
+96,CMT05-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,25.0,45.0,25.02,44.5004804804805,35.009989989990004
+97,CMT05-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+98,CMT05-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+99,CMT05-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
+100,CMT06-Grasses,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+101,CMT06-Grasses,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+102,CMT06-Grasses,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+103,CMT06-Grasses,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+104,CMT06-Grasses,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+105,CMT06-Grasses,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+106,CMT06-Grasses,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+107,CMT06-Grasses,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+108,CMT06-Grasses,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+109,CMT06-Grasses,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+110,CMT06-Grasses,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+111,CMT06-Grasses,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+112,CMT06-Grasses,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+113,CMT06-Grasses,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-7.5,-2.5,-7.495,-2.62487987987988,-4.9975025025025
+114,CMT06-Grasses,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,10.0,30.0,10.02,29.500480480480498,20.009989989989997
+115,CMT06-Grasses,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,25.0,45.0,25.02,44.5004804804805,35.009989989990004
+116,CMT06-Grasses,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+117,CMT06-Grasses,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+118,CMT06-Grasses,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,gamma,1.0,6.0,0.000166750055597256,0.61548324184711,0.11654683558170699
+119,CMT06-Grasses,SLA; specific leaf area,m2 kg leaf-1,norm,18.2684191778594,0.6066279658783,16.3937978398774,19.459995303603698,18.2702956756952
+120,CMT06-Sedges,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+121,CMT06-Sedges,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+122,CMT06-Sedges,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.01,0.65,0.01064,0.634015375375375,0.33031967967967996
+123,CMT06-Sedges,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+124,CMT06-Sedges,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+125,CMT06-Sedges,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+126,CMT06-Sedges,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+127,CMT06-Sedges,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+128,CMT06-Sedges,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+129,CMT06-Sedges,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+130,CMT06-Sedges,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+131,CMT06-Sedges,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+132,CMT06-Sedges,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+133,CMT06-Sedges,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+134,CMT06-Sedges,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-7.5,-2.5,-7.495,-2.62487987987988,-4.9975025025025
+135,CMT06-Sedges,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,10.0,30.0,10.02,29.500480480480498,20.009989989989997
+136,CMT06-Sedges,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,25.0,45.0,25.02,44.5004804804805,35.009989989990004
+137,CMT06-Sedges,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+138,CMT06-Sedges,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+139,CMT06-Sedges,SLA; specific leaf area,m2 kg leaf-1,norm,18.9613617481874,0.6263816061436539,17.025697072893,20.1917391944456,18.963299350465
+140,CMT04-Salix,Extinction coefficient,unitless,weibull,4.0,0.4,0.0711400720617792,0.554854357511702,0.36529846070456395
+141,CMT04-Salix,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+142,CMT04-Salix,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+143,CMT04-Salix,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+144,CMT04-Salix,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+145,CMT04-Salix,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+146,CMT04-Salix,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+147,CMT04-Salix,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+148,CMT04-Salix,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+149,CMT04-Salix,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+150,CMT04-Salix,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+151,CMT04-Salix,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+152,CMT04-Salix,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+153,CMT04-Salix,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+154,CMT04-Salix,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,1.5,9.5,1.508,9.30019219219219,5.503995995995999
+155,CMT04-Salix,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,19.0,28.0,19.009,27.775216216216197,23.5044954954955
+156,CMT04-Salix,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,20.0,30.0,20.01,29.750240240240196,25.004994994995
+157,CMT04-Salix,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+158,CMT04-Salix,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+159,CMT04-Salix,SLA; specific leaf area,m2 kg leaf-1,norm,10.9285247402424,0.208694157449098,10.2836113127847,11.3384546966344,10.929170299228801
+160,CMT04-Decid,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+161,CMT04-Decid,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+162,CMT04-Decid,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+163,CMT04-Decid,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+164,CMT04-Decid,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+165,CMT04-Decid,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+166,CMT04-Decid,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+167,CMT04-Decid,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+168,CMT04-Decid,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+169,CMT04-Decid,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+170,CMT04-Decid,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+171,CMT04-Decid,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+172,CMT04-Decid,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+173,CMT04-Decid,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+174,CMT04-Decid,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+175,CMT04-Decid,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+176,CMT04-Decid,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+177,CMT04-Decid,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+178,CMT04-Decid,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+179,CMT04-Decid,SLA; specific leaf area,m2 kg leaf-1,norm,8.531421457018219,0.42288683800409793,7.2246028883648,9.36208190856469,8.532729583713571
+180,CMT04-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+181,CMT04-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+182,CMT04-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+183,CMT04-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+184,CMT04-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+185,CMT04-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+186,CMT04-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+187,CMT04-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+188,CMT04-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+189,CMT04-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+190,CMT04-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+191,CMT04-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+192,CMT04-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+193,CMT04-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+194,CMT04-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+195,CMT04-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+196,CMT04-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+197,CMT04-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+198,CMT04-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+199,CMT04-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
+200,CMT05-EGreen,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+201,CMT05-EGreen,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+202,CMT05-EGreen,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+203,CMT05-EGreen,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+204,CMT05-EGreen,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+205,CMT05-EGreen,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+206,CMT05-EGreen,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+207,CMT05-EGreen,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+208,CMT05-EGreen,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+209,CMT05-EGreen,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+210,CMT05-EGreen,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+211,CMT05-EGreen,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+212,CMT05-EGreen,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+213,CMT05-EGreen,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+214,CMT05-EGreen,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+215,CMT05-EGreen,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+216,CMT05-EGreen,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+217,CMT05-EGreen,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+218,CMT05-EGreen,ilai; Starting value for leaf area index,m2 m-2,norm,2.0,0.25,1.22744192345805,2.4910654440481896,2.00077333140795
+219,CMT05-EGreen,SLA; specific leaf area,m2 kg leaf-1,norm,7.52506776639011,1.00559671847031,4.41754029999682,9.50032296274621,7.52817840449461
+220,CMT05-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+221,CMT05-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+222,CMT05-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+223,CMT05-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+224,CMT05-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+225,CMT05-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+226,CMT05-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+227,CMT05-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+228,CMT05-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+229,CMT05-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.3,0.6,0.3003,0.592507207207207,0.45014984984984996
+230,CMT05-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,5.0,25.0,5.02,24.500480480480498,15.009989989989998
+231,CMT05-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,17.0,42.0,17.025,41.3756006006006,29.5124874874875
+232,CMT05-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,35.0,56.0,35.021,55.4755045045045,45.5104894894895
+233,CMT05-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,4.0,14.0,4.01,13.750240240240199,9.004994994994991
+234,CMT05-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-10.0,0.0,-9.99,-0.24975975975976,-4.99500500500501
+235,CMT05-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,15.0,25.0,15.01,24.750240240240196,20.004994994995002
+236,CMT05-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,25.0,45.0,25.02,44.5004804804805,35.009989989990004
+237,CMT05-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+238,CMT05-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+239,CMT05-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
+240,CMT05-EGreen,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+241,CMT05-EGreen,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+242,CMT05-EGreen,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+243,CMT05-EGreen,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+244,CMT05-EGreen,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+245,CMT05-EGreen,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+246,CMT05-EGreen,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+247,CMT05-EGreen,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+248,CMT05-EGreen,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+249,CMT05-EGreen,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+250,CMT05-EGreen,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+251,CMT05-EGreen,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+252,CMT05-EGreen,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+253,CMT05-EGreen,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+254,CMT05-EGreen,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+255,CMT05-EGreen,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+256,CMT05-EGreen,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+257,CMT05-EGreen,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+258,CMT05-EGreen,ilai; Starting value for leaf area index,m2 m-2,norm,2.0,0.25,1.22744192345805,2.4910654440481896,2.00077333140795
+259,CMT05-EGreen,SLA; specific leaf area,m2 kg leaf-1,norm,7.52506776639011,1.00559671847031,4.41754029999682,9.50032296274621,7.52817840449461
+260,CMT05-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+261,CMT05-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+262,CMT05-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+263,CMT05-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+264,CMT05-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+265,CMT05-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+266,CMT05-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+267,CMT05-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+268,CMT05-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+269,CMT05-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.3,0.6,0.3003,0.592507207207207,0.45014984984984996
+270,CMT05-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,5.0,25.0,5.02,24.500480480480498,15.009989989989998
+271,CMT05-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,17.0,42.0,17.025,41.3756006006006,29.5124874874875
+272,CMT05-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,35.0,56.0,35.021,55.4755045045045,45.5104894894895
+273,CMT05-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,4.0,14.0,4.01,13.750240240240199,9.004994994994991
+274,CMT05-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-10.0,0.0,-9.99,-0.24975975975976,-4.99500500500501
+275,CMT05-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,15.0,25.0,15.01,24.750240240240196,20.004994994995002
+276,CMT05-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,25.0,45.0,25.02,44.5004804804805,35.009989989990004
+277,CMT05-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+278,CMT05-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+279,CMT05-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
+280,CMT04-Salix,Extinction coefficient,unitless,weibull,4.0,0.4,0.0711400720617792,0.554854357511702,0.36529846070456395
+281,CMT04-Salix,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+282,CMT04-Salix,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+283,CMT04-Salix,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+284,CMT04-Salix,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+285,CMT04-Salix,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+286,CMT04-Salix,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+287,CMT04-Salix,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+288,CMT04-Salix,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+289,CMT04-Salix,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+290,CMT04-Salix,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+291,CMT04-Salix,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+292,CMT04-Salix,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+293,CMT04-Salix,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+294,CMT04-Salix,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,1.5,9.5,1.508,9.30019219219219,5.503995995995999
+295,CMT04-Salix,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,19.0,28.0,19.009,27.775216216216197,23.5044954954955
+296,CMT04-Salix,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,20.0,30.0,20.01,29.750240240240196,25.004994994995
+297,CMT04-Salix,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+298,CMT04-Salix,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+299,CMT04-Salix,SLA; specific leaf area,m2 kg leaf-1,norm,10.9285247402424,0.208694157449098,10.2836113127847,11.3384546966344,10.929170299228801
+300,CMT04-Decid,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+301,CMT04-Decid,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+302,CMT04-Decid,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+303,CMT04-Decid,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+304,CMT04-Decid,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+305,CMT04-Decid,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+306,CMT04-Decid,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+307,CMT04-Decid,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+308,CMT04-Decid,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+309,CMT04-Decid,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+310,CMT04-Decid,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+311,CMT04-Decid,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+312,CMT04-Decid,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+313,CMT04-Decid,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+314,CMT04-Decid,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+315,CMT04-Decid,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+316,CMT04-Decid,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+317,CMT04-Decid,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+318,CMT04-Decid,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+319,CMT04-Decid,SLA; specific leaf area,m2 kg leaf-1,norm,8.531421457018219,0.42288683800409793,7.2246028883648,9.36208190856469,8.532729583713571
+320,CMT04-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+321,CMT04-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+322,CMT04-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+323,CMT04-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+324,CMT04-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+325,CMT04-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+326,CMT04-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+327,CMT04-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+328,CMT04-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+329,CMT04-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+330,CMT04-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+331,CMT04-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+332,CMT04-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+333,CMT04-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+334,CMT04-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+335,CMT04-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+336,CMT04-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+337,CMT04-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+338,CMT04-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+339,CMT04-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
+340,CMT04-Salix,Extinction coefficient,unitless,weibull,4.0,0.4,0.0711400720617792,0.554854357511702,0.36529846070456395
+341,CMT04-Salix,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+342,CMT04-Salix,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+343,CMT04-Salix,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+344,CMT04-Salix,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+345,CMT04-Salix,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+346,CMT04-Salix,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+347,CMT04-Salix,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+348,CMT04-Salix,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+349,CMT04-Salix,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+350,CMT04-Salix,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+351,CMT04-Salix,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+352,CMT04-Salix,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+353,CMT04-Salix,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+354,CMT04-Salix,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,1.5,9.5,1.508,9.30019219219219,5.503995995995999
+355,CMT04-Salix,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,19.0,28.0,19.009,27.775216216216197,23.5044954954955
+356,CMT04-Salix,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,20.0,30.0,20.01,29.750240240240196,25.004994994995
+357,CMT04-Salix,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+358,CMT04-Salix,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+359,CMT04-Salix,SLA; specific leaf area,m2 kg leaf-1,norm,10.9285247402424,0.208694157449098,10.2836113127847,11.3384546966344,10.929170299228801
+360,CMT04-Decid,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+361,CMT04-Decid,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+362,CMT04-Decid,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+363,CMT04-Decid,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+364,CMT04-Decid,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+365,CMT04-Decid,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+366,CMT04-Decid,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+367,CMT04-Decid,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+368,CMT04-Decid,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+369,CMT04-Decid,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+370,CMT04-Decid,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+371,CMT04-Decid,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+372,CMT04-Decid,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+373,CMT04-Decid,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+374,CMT04-Decid,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+375,CMT04-Decid,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+376,CMT04-Decid,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+377,CMT04-Decid,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+378,CMT04-Decid,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+379,CMT04-Decid,SLA; specific leaf area,m2 kg leaf-1,norm,8.531421457018219,0.42288683800409793,7.2246028883648,9.36208190856469,8.532729583713571
+380,CMT04-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+381,CMT04-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+382,CMT04-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+383,CMT04-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+384,CMT04-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+385,CMT04-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+386,CMT04-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+387,CMT04-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+388,CMT04-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+389,CMT04-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+390,CMT04-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+391,CMT04-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+392,CMT04-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+393,CMT04-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+394,CMT04-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+395,CMT04-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+396,CMT04-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+397,CMT04-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+398,CMT04-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+399,CMT04-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
+400,CMT05-EGreen,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+401,CMT05-EGreen,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+402,CMT05-EGreen,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+403,CMT05-EGreen,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+404,CMT05-EGreen,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+405,CMT05-EGreen,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+406,CMT05-EGreen,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+407,CMT05-EGreen,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+408,CMT05-EGreen,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+409,CMT05-EGreen,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+410,CMT05-EGreen,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+411,CMT05-EGreen,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+412,CMT05-EGreen,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+413,CMT05-EGreen,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+414,CMT05-EGreen,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+415,CMT05-EGreen,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+416,CMT05-EGreen,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+417,CMT05-EGreen,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+418,CMT05-EGreen,ilai; Starting value for leaf area index,m2 m-2,norm,2.0,0.25,1.22744192345805,2.4910654440481896,2.00077333140795
+419,CMT05-EGreen,SLA; specific leaf area,m2 kg leaf-1,norm,7.52506776639011,1.00559671847031,4.41754029999682,9.50032296274621,7.52817840449461
+420,CMT05-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+421,CMT05-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+422,CMT05-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+423,CMT05-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+424,CMT05-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+425,CMT05-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+426,CMT05-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+427,CMT05-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+428,CMT05-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+429,CMT05-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.3,0.6,0.3003,0.592507207207207,0.45014984984984996
+430,CMT05-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,5.0,25.0,5.02,24.500480480480498,15.009989989989998
+431,CMT05-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,17.0,42.0,17.025,41.3756006006006,29.5124874874875
+432,CMT05-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,35.0,56.0,35.021,55.4755045045045,45.5104894894895
+433,CMT05-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,4.0,14.0,4.01,13.750240240240199,9.004994994994991
+434,CMT05-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-10.0,0.0,-9.99,-0.24975975975976,-4.99500500500501
+435,CMT05-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,15.0,25.0,15.01,24.750240240240196,20.004994994995002
+436,CMT05-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,25.0,45.0,25.02,44.5004804804805,35.009989989990004
+437,CMT05-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+438,CMT05-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+439,CMT05-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
+440,CMT05-EGreen,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+441,CMT05-EGreen,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+442,CMT05-EGreen,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+443,CMT05-EGreen,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+444,CMT05-EGreen,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+445,CMT05-EGreen,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+446,CMT05-EGreen,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+447,CMT05-EGreen,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+448,CMT05-EGreen,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+449,CMT05-EGreen,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+450,CMT05-EGreen,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+451,CMT05-EGreen,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+452,CMT05-EGreen,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+453,CMT05-EGreen,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+454,CMT05-EGreen,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+455,CMT05-EGreen,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+456,CMT05-EGreen,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+457,CMT05-EGreen,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+458,CMT05-EGreen,ilai; Starting value for leaf area index,m2 m-2,norm,2.0,0.25,1.22744192345805,2.4910654440481896,2.00077333140795
+459,CMT05-EGreen,SLA; specific leaf area,m2 kg leaf-1,norm,7.52506776639011,1.00559671847031,4.41754029999682,9.50032296274621,7.52817840449461
+460,CMT05-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+461,CMT05-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+462,CMT05-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+463,CMT05-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+464,CMT05-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+465,CMT05-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+466,CMT05-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+467,CMT05-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+468,CMT05-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+469,CMT05-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.3,0.6,0.3003,0.592507207207207,0.45014984984984996
+470,CMT05-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,5.0,25.0,5.02,24.500480480480498,15.009989989989998
+471,CMT05-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,17.0,42.0,17.025,41.3756006006006,29.5124874874875
+472,CMT05-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,35.0,56.0,35.021,55.4755045045045,45.5104894894895
+473,CMT05-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,4.0,14.0,4.01,13.750240240240199,9.004994994994991
+474,CMT05-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-10.0,0.0,-9.99,-0.24975975975976,-4.99500500500501
+475,CMT05-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,15.0,25.0,15.01,24.750240240240196,20.004994994995002
+476,CMT05-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,25.0,45.0,25.02,44.5004804804805,35.009989989990004
+477,CMT05-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+478,CMT05-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+479,CMT05-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
+480,CMT07-EGreen,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+481,CMT07-EGreen,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+482,CMT07-EGreen,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+483,CMT07-EGreen,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+484,CMT07-EGreen,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+485,CMT07-EGreen,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+486,CMT07-EGreen,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+487,CMT07-EGreen,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+488,CMT07-EGreen,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+489,CMT07-EGreen,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+490,CMT07-EGreen,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+491,CMT07-EGreen,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+492,CMT07-EGreen,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+493,CMT07-EGreen,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+494,CMT07-EGreen,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+495,CMT07-EGreen,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+496,CMT07-EGreen,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+497,CMT07-EGreen,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+498,CMT07-EGreen,ilai; Starting value for leaf area index,m2 m-2,norm,2.0,0.25,1.22744192345805,2.4910654440481896,2.00077333140795
+499,CMT07-EGreen,SLA; specific leaf area,m2 kg leaf-1,norm,5.98291850072757,0.35366220614785104,4.890020125818901,6.6776036539478,5.984012493094849
+500,CMT07-Decid,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+501,CMT07-Decid,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+502,CMT07-Decid,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+503,CMT07-Decid,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+504,CMT07-Decid,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+505,CMT07-Decid,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+506,CMT07-Decid,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+507,CMT07-Decid,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+508,CMT07-Decid,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+509,CMT07-Decid,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+510,CMT07-Decid,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+511,CMT07-Decid,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+512,CMT07-Decid,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+513,CMT07-Decid,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+514,CMT07-Decid,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+515,CMT07-Decid,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+516,CMT07-Decid,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+517,CMT07-Decid,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+518,CMT07-Decid,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+519,CMT07-Decid,SLA; specific leaf area,m2 kg leaf-1,gamma,60.532901796123,5.45709898503412,7.2024710323524594,14.064096210417599,11.0350905011816
+520,CMT04-Salix,Extinction coefficient,unitless,weibull,4.0,0.4,0.0711400720617792,0.554854357511702,0.36529846070456395
+521,CMT04-Salix,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+522,CMT04-Salix,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+523,CMT04-Salix,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+524,CMT04-Salix,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+525,CMT04-Salix,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+526,CMT04-Salix,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+527,CMT04-Salix,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+528,CMT04-Salix,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+529,CMT04-Salix,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+530,CMT04-Salix,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+531,CMT04-Salix,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+532,CMT04-Salix,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+533,CMT04-Salix,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+534,CMT04-Salix,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,1.5,9.5,1.508,9.30019219219219,5.503995995995999
+535,CMT04-Salix,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,19.0,28.0,19.009,27.775216216216197,23.5044954954955
+536,CMT04-Salix,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,20.0,30.0,20.01,29.750240240240196,25.004994994995
+537,CMT04-Salix,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+538,CMT04-Salix,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+539,CMT04-Salix,SLA; specific leaf area,m2 kg leaf-1,norm,10.9285247402424,0.208694157449098,10.2836113127847,11.3384546966344,10.929170299228801
+540,CMT04-Decid,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+541,CMT04-Decid,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+542,CMT04-Decid,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+543,CMT04-Decid,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+544,CMT04-Decid,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+545,CMT04-Decid,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+546,CMT04-Decid,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+547,CMT04-Decid,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+548,CMT04-Decid,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+549,CMT04-Decid,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+550,CMT04-Decid,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+551,CMT04-Decid,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+552,CMT04-Decid,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+553,CMT04-Decid,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+554,CMT04-Decid,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+555,CMT04-Decid,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+556,CMT04-Decid,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+557,CMT04-Decid,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+558,CMT04-Decid,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+559,CMT04-Decid,SLA; specific leaf area,m2 kg leaf-1,norm,8.531421457018219,0.42288683800409793,7.2246028883648,9.36208190856469,8.532729583713571
+560,CMT04-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+561,CMT04-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+562,CMT04-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+563,CMT04-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+564,CMT04-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+565,CMT04-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+566,CMT04-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+567,CMT04-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+568,CMT04-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+569,CMT04-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+570,CMT04-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+571,CMT04-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+572,CMT04-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+573,CMT04-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+574,CMT04-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+575,CMT04-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+576,CMT04-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+577,CMT04-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+578,CMT04-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+579,CMT04-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
+580,CMT05-EGreen,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+581,CMT05-EGreen,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+582,CMT05-EGreen,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+583,CMT05-EGreen,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+584,CMT05-EGreen,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+585,CMT05-EGreen,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+586,CMT05-EGreen,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+587,CMT05-EGreen,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+588,CMT05-EGreen,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+589,CMT05-EGreen,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+590,CMT05-EGreen,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+591,CMT05-EGreen,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+592,CMT05-EGreen,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+593,CMT05-EGreen,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+594,CMT05-EGreen,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+595,CMT05-EGreen,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+596,CMT05-EGreen,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+597,CMT05-EGreen,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+598,CMT05-EGreen,ilai; Starting value for leaf area index,m2 m-2,norm,2.0,0.25,1.22744192345805,2.4910654440481896,2.00077333140795
+599,CMT05-EGreen,SLA; specific leaf area,m2 kg leaf-1,norm,7.52506776639011,1.00559671847031,4.41754029999682,9.50032296274621,7.52817840449461
+600,CMT05-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+601,CMT05-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+602,CMT05-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+603,CMT05-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+604,CMT05-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+605,CMT05-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+606,CMT05-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+607,CMT05-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+608,CMT05-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+609,CMT05-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.3,0.6,0.3003,0.592507207207207,0.45014984984984996
+610,CMT05-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,5.0,25.0,5.02,24.500480480480498,15.009989989989998
+611,CMT05-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,17.0,42.0,17.025,41.3756006006006,29.5124874874875
+612,CMT05-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,35.0,56.0,35.021,55.4755045045045,45.5104894894895
+613,CMT05-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,4.0,14.0,4.01,13.750240240240199,9.004994994994991
+614,CMT05-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-10.0,0.0,-9.99,-0.24975975975976,-4.99500500500501
+615,CMT05-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,15.0,25.0,15.01,24.750240240240196,20.004994994995002
+616,CMT05-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,25.0,45.0,25.02,44.5004804804805,35.009989989990004
+617,CMT05-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+618,CMT05-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+619,CMT05-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
+620,CMT04-Salix,Extinction coefficient,unitless,weibull,4.0,0.4,0.0711400720617792,0.554854357511702,0.36529846070456395
+621,CMT04-Salix,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+622,CMT04-Salix,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+623,CMT04-Salix,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+624,CMT04-Salix,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+625,CMT04-Salix,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+626,CMT04-Salix,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+627,CMT04-Salix,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+628,CMT04-Salix,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+629,CMT04-Salix,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+630,CMT04-Salix,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+631,CMT04-Salix,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+632,CMT04-Salix,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+633,CMT04-Salix,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+634,CMT04-Salix,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,1.5,9.5,1.508,9.30019219219219,5.503995995995999
+635,CMT04-Salix,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,19.0,28.0,19.009,27.775216216216197,23.5044954954955
+636,CMT04-Salix,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,20.0,30.0,20.01,29.750240240240196,25.004994994995
+637,CMT04-Salix,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+638,CMT04-Salix,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+639,CMT04-Salix,SLA; specific leaf area,m2 kg leaf-1,norm,10.9285247402424,0.208694157449098,10.2836113127847,11.3384546966344,10.929170299228801
+640,CMT04-Decid,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+641,CMT04-Decid,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+642,CMT04-Decid,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+643,CMT04-Decid,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+644,CMT04-Decid,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+645,CMT04-Decid,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+646,CMT04-Decid,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+647,CMT04-Decid,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+648,CMT04-Decid,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+649,CMT04-Decid,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+650,CMT04-Decid,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+651,CMT04-Decid,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+652,CMT04-Decid,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+653,CMT04-Decid,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+654,CMT04-Decid,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+655,CMT04-Decid,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+656,CMT04-Decid,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+657,CMT04-Decid,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+658,CMT04-Decid,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+659,CMT04-Decid,SLA; specific leaf area,m2 kg leaf-1,norm,8.531421457018219,0.42288683800409793,7.2246028883648,9.36208190856469,8.532729583713571
+660,CMT04-Betula,Extinction coefficient,unitless,gamma,5.0,10.0,0.0739371731917833,1.02499118557003,0.46786487062656
+661,CMT04-Betula,SW_albedo; Shortwave albedo,W m-2,unif,0.01,0.3,0.01029,0.292756966966967,0.15514485485485502
+662,CMT04-Betula,Fine root productivity allocationn at 30 cm depth,percent,unif,1.0,30.0,1.0290000000000001,29.275696696696702,15.5144854854855
+663,CMT04-Betula,Fine root productivity allocationn at 40 cm depth,percent,unif,0.5,10.0,0.5095,9.76272822822823,5.25474524524525
+664,CMT04-Betula,ppfd50; Amount of photosynthetically active radiation at which stomates partially (half) close,µmol m-2 s-1,unif,5.0,145.0,5.14,141.503363363363,75.0699299299299
+665,CMT04-Betula,vpd_open; Vapor pressure deficit for leaf stomata fully opened,Pa,unif,0.765,1.1,0.765335,1.09163304804805,0.932667332332332
+666,CMT04-Betula,vpd_close; Vapor pressure deficit for leaf stomata fully closed,Pa,unif,3.25,5.0,3.25175,4.95629204204204,4.1258741241241195
+667,CMT04-Betula,Fine root productivity allocationn at 10 cm depth,percent,unif,1.0,60.0,1.0590000000000002,58.5264174174174,30.5294704704705
+668,CMT04-Betula,Fine root productivity allocationn at 20 cm depth,percent,unif,10.0,90.0,10.08,88.0019219219219,50.039959959959994
+669,CMT04-Betula,gcmax; Maximum canopy conductance,m s-1,unif,0.0025,0.0035,0.002501,0.00347502402402402,0.0030004994994995
+670,CMT04-Betula,pstemp_min; Minimum temperature for photosynthesis,degree_C,unif,-11.0,-5.0,-10.994000000000002,-5.1498558558558605,-7.997003003003
+671,CMT04-Betula,pstemp_low; The range of minimal temperatures for photosynthesis,degree_C,unif,2.0,9.0,2.0069999999999997,8.82516816816817,5.5034964964965
+672,CMT04-Betula,pstemp_high; The range of maximum temperatures for photosynthesis,degree_C,unif,20.0,26.0,20.006,25.8501441441441,23.002996996997
+673,CMT04-Betula,pstemp_max; Maximum temperature for photosynthesis,degree_C,unif,22.0,28.0,22.006,27.8501441441441,25.002996996997
+674,CMT04-Betula,Fine root productivity allocationn at 50 cm depth,percent,unif,0.005,4.0,0.008995,3.90022097597598,2.0044955005005
+675,CMT04-Betula,Cuticular conductance,µmol m-2 s-1,lnorm,8.0,0.7,342.693816651818,11766.1337124521,3006.45558607611
+676,CMT04-Betula,klai; Extinction coefficient for converting between LAI and foliar percent cover,unitless,unif,0.15,0.34,0.15019000000000002,0.335254564564565,0.245094904904905
+677,CMT04-Betula,labncon; Labile N concentration,g N m-2,unif,0.05,0.35,0.0503,0.34250720720720695,0.20014984984985001
+678,CMT04-Betula,ilai; Starting value for leaf area index,m2 m-2,gamma,1.0,20.0,5.0025016679176706e-05,0.184644972554133,0.0349640506745122
+679,CMT04-Betula,SLA; specific leaf area,m2 kg leaf-1,norm,12.5370181678127,0.0960050284867679,12.240340327228301,12.7255971755916,12.537315142628099
